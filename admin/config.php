@@ -30,8 +30,16 @@ function template_header($title) {
         <nav class="navtop">
             <div>
                 <h1>ADMIN</h1>
-                <a href="index.php"><i class="fas fa-home"></i>Home</a>
+                <a href="#">Blogs</a>
+                <a href="#">Categories</a>
+                <a href="#">Colors</a>
+                <a href="#">Comments</a>
+                <a href="#">Configs</a>
+                <a href="#">Memories</a>
+                <a href="#">Orders</a>
                 <a href="index.php?action=index&controller=product">Products</a>
+                <a href="#">Rams</a>
+                <a href="#">Slides</a>
                 <a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i>Users</a>
             </div>
         </nav>

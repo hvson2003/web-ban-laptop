@@ -1,0 +1,69 @@
+#logo{
+  text-align: center;
+  background-color: #a92525;
+    border: 1px solid #a92525;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 30px;
+    color: white;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  background-color: rgb(254, 254, 254);
+  margin: 100px 100px;
+  border: 2px solid #a92525 ;
+  padding: 20px 10px 10px 10px;
+}
+
+.input-infor{
+  
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.login h1{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+.user{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.user i{
+  margin-right: 10px;
+  padding-top:5px;
+}
+.password{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+.password i {
+  margin-right: 10px;
+  padding-top:5px;
+}
+.bt_login{
+  margin-left: 60PX;
+  background: #A92525;
+  border: 0;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  height: 34px;
+  line-height: 21px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: 20px;
+  border-radius: 20px;
+}

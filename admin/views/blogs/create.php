@@ -20,7 +20,7 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Thumbnail</span>
-                        <input type="text" class="form-control" value=1 required name="thumbnail">
+                        <input type="text" class="form-control" required name="thumbnail">
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">

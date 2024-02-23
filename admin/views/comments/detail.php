@@ -27,7 +27,14 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Product</span>
-                        <input type="text" class="form-control" required name="product_id" value="<?= $comment["product_id"] ?>">
+                        <input type="text" class="form-control" required name="product_id" 
+                            value="<?php                   
+                                foreach($products as $product){
+                                    if($product['id']==$comment['product_id']){
+                                        echo $product['name'];
+                                    }
+                                } 
+                            ?>">
                     </div>
                     <div class="form-group  float-end ">
                         <a href="index.php?controller=comment&action=index" class="btn btn-warning ">Quay lại</a>

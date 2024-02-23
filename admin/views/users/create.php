@@ -8,27 +8,27 @@
                 <form action="index.php?controller=category&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Username</span>
-                        <input type="text" class="form-control" value=1 required name="username">
+                        <input type="text" class="form-control" required name="username">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Password</span>
-                        <input type="password" class="form-control" value=1233456 required name="username">
+                        <input type="password" class="form-control"233456 required name="username">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Fullname</span>
-                        <input type="text" class="form-control" value=1 required name="fullname">
+                        <input type="text" class="form-control" required name="fullname">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Email</span>
-                        <input type="text" class="form-control" value=1 required name="email">
+                        <input type="text" class="form-control" required name="email">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Address</span>
-                        <input type="text" class="form-control" value=1 required name="address">
+                        <input type="text" class="form-control" required name="address">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Phone</span>
-                        <input type="text" class="form-control" value=1 required name="phone">
+                        <input type="text" class="form-control" required name="phone">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <label for="role">Role</label>

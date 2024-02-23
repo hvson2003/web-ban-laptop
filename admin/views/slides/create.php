@@ -15,11 +15,11 @@
                 <form action="index.php?controller=slide&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Title</span>
-                        <input type="text" class="form-control" value=1 required name="title">
+                        <input type="text" class="form-control" required name="title">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Sub Title</span>
-                        <input type="text" class="form-control" value=1 required name="sub_title">
+                        <input type="text" class="form-control" required name="sub_title">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Slide Description</span>
@@ -27,15 +27,15 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Image Url</span>
-                        <input type="text" class="form-control" value=1 required name="image_url">
+                        <input type="text" class="form-control" required name="image_url">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Button Title</span>
-                        <input type="text" class="form-control" value=1 required name="button_title">
+                        <input type="text" class="form-control" required name="button_title">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Button Url</span>
-                        <input type="text" class="form-control" value=1 required name="button_url">
+                        <input type="text" class="form-control" required name="button_url">
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Tạo" class="btn btn-success">

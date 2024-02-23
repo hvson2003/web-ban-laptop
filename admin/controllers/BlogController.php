@@ -9,18 +9,17 @@ class BlogController
         $pdo = pdo_connect_mysql();
         $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 
-        $records_per_page = 1;
+        $records_per_page = 5;
         $stmt = $pdo->prepare('SELECT * FROM blogs ORDER BY id DESC LIMIT :current_page, :record_per_page');
         $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
         $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
         $stmt->execute();
 
-        $blog = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $num_blogs = $pdo->query('SELECT COUNT(*) FROM blogs')->fetchColumn();
-        $number_page = $num_blogs/$records_per_page;
+        $number_page = $num_blogs/$records_per_page - 1;
 
         $users = User::getAll();
-        $blogs = Blog::getAll();
         require 'views/blogs/index.php';
     }
 

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold">Sửa Sản Phẩm</h3>
-                <form action="index.php?controller=product&action=update" method="post">
+                <form class="border shadow p-5" action="index.php?controller=product&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" value=<?= $product['id'] ?> name="id" hidden>
                     </div>

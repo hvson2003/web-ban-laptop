@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold">Thêm Sản Phẩm</h3>
-                <form action="index.php?controller=product&action=store" method="post">
+                <form class="border shadow p-5" action="index.php?controller=product&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Name</span>
                         <input type="text" class="form-control" value=1 required name="name">

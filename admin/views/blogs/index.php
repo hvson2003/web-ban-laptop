@@ -7,7 +7,6 @@
             <tr>
                 <td>#</td>
                 <td>Title</td>
-                <td>Content</td>
                 <td>Blog Description</td>
                 <td>Thumbnail</td>
                 <td>User</td>
@@ -19,7 +18,6 @@
             <tr>
                 <td><?=$blog['id']?></td>
                 <td><?=$blog['title']?></td>
-                <td><?=$blog['content']?></td>
                 <td><?=$blog['blog_desc']?></td>
                 <td><?=$blog['thumbnail']?></td>
                 <td>

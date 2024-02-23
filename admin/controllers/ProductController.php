@@ -3,25 +3,27 @@ include("models/product.php");
 include("models/category.php");
 
 class ProductController
-{
-    public function index()
+{public function index()
     {
         $pdo = pdo_connect_mysql();
-        $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
-
-        $records_per_page = 5;
-        $stmt = $pdo->prepare('SELECT * FROM products ORDER BY id DESC LIMIT :current_page, :record_per_page');
-        $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
-        $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
+        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $records_per_page = 5;    
+        $offset = ($page - 1) * $records_per_page;
+    
+        $stmt = $pdo->prepare('SELECT * FROM products ORDER BY id DESC LIMIT :offset, :records_per_page');
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        $stmt->bindParam(':records_per_page', $records_per_page, PDO::PARAM_INT);
         $stmt->execute();
 
         $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $num_products = $pdo->query('SELECT COUNT(*) FROM products')->fetchColumn();
-        $number_page = $num_products/$records_per_page;
-
+        $stmt = $pdo->query('SELECT COUNT(*) FROM products');
+        $num_products = $stmt->fetchColumn();
+    
+        $number_page = ceil($num_products / $records_per_page);
         $categories = Category::getAll();
         require 'views/products/index.php';
     }
+    
 
     public function create()
     {

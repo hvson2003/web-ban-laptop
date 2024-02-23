@@ -24,11 +24,11 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Product Description</span>
-                        <input type="text" class="form-control" value=1 required name="product_desc">
+                        <textarea type="text" style="width: 300px; height: 150px;" class="form-control" name="product_desc" required>1</textarea>
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Detail Description</span>
-                        <input type="text" class="form-control" value=1 required name="detail_desc">
+                        <textarea type="text" style="width: 300px; height: 150px;" class="form-control" name="detail_desc" required>1</textarea>
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Chipset</span>

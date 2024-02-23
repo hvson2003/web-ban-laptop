@@ -1,11 +1,9 @@
 <!-- <?php
 class Category{
     private $id;
-    private $propertyName;
-    private $type;
-    private $location;
-    private $price;
-    private $agentID;
+    private $name;
+    private $cate_desc;
+    private $thumbnail;
     public $db;
     public function __construct()
     {
@@ -28,7 +26,7 @@ class Category{
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         $list = [];
-        $sql = "SELECT * FROM categories WHERE PropertyID = " . $id;
+        $sql = "SELECT * FROM categories WHERE id = " . $id;
         $result = $db->query($sql);
         while ($row = $result->fetch_assoc()) {
             $list = $row;
@@ -36,49 +34,54 @@ class Category{
         return $list; 
     }
 
-    public static function getAgent()
-    {
-        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $list = [];
-        $sql = "SELECT * FROM agents";
-        $result = $db->query($sql);
-        while ($row = $result->fetch_assoc()) {
-            $list['id'][] = $row["AgentID"];
-            $list['name'][] = $row["AgentName"];
-        }
-        return $list; 
-    }
-
-
     public function save()
     {
-        $query = $this->db->prepare('INSERT INTO categories (PropertyName, Type, Location, Price, AgentID) VALUES (:PropertyName, :Type, :Location, :Price, :AgentID)');
-        $query->bindParam(':PropertyName', $this->propertyName, PDO::PARAM_STR);
-        $query->bindParam(':Type', $this->type, PDO::PARAM_STR);
-        $query->bindParam(':Location', $this->location, PDO::PARAM_STR);
-        $query->bindParam(':Price', $this->price, PDO::PARAM_INT);
-        $query->bindParam(':AgentID', $this->agentID, PDO::PARAM_INT);
+        $query = $this->db->prepare('INSERT INTO categories (name, cate_desc, thumbnail) VALUES (:name, :cate_desc, :thumbnail)');
+        $query->bindParam(':name', $this->name, PDO::PARAM_STR);
+        $query->bindParam(':cate_desc', $this->cate_desc, PDO::PARAM_STR);
+        $query->bindParam(':thumbnail', $this->thumbnail, PDO::PARAM_STR);
         $query->execute();
     }
 
     public function update($id)
     {
-        $query = $this->db->prepare('UPDATE categories SET PropertyName = :PropertyName, Type = :Type, Location = :Location, Price = :Price, AgentID = :AgentID WHERE PropertyID = :id');
+        $query = $this->db->prepare('UPDATE categories SET name = :name, cate_desc = :cate_desc, thumbnail = :thumbnail WHERE id = :id');
         $query->bindParam(':id', $id);
-        $query->bindParam(':PropertyName', $this->propertyName, PDO::PARAM_STR);
-        $query->bindParam(':Type', $this->type, PDO::PARAM_STR);
-        $query->bindParam(':Location', $this->location, PDO::PARAM_STR);
-        $query->bindParam(':Price', $this->price, PDO::PARAM_INT);
-        $query->bindParam(':AgentID', $this->agentID, PDO::PARAM_INT);
+        $query->bindParam(':name', $this->name, PDO::PARAM_STR);
+        $query->bindParam(':cate_desc', $this->cate_desc, PDO::PARAM_STR);
+        $query->bindParam(':thumbnail', $this->thumbnail, PDO::PARAM_STR);
         $query->execute();
     }
 
     public static function delete($id)
     {
         $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
-        $query = $db->prepare('DELETE FROM categories WHERE PropertyID = :id');
+        $query = $db->prepare('DELETE FROM categories WHERE id = :id');
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->execute();
+    }
+    public function getName() {
+        return $this->name;
+    }
+
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+    public function getCateDesc() {
+        return $this->cate_desc;
+    }
+
+    public function setCateDesc($cate_desc) {
+        $this->cate_desc = $cate_desc;
+    }
+
+    public function getThumbnail() {
+        return $this->thumbnail;
+    }
+
+    public function setThumbnail($thumbnail) {
+        $this->thumbnail = $thumbnail;
     }
 }
 ?> -->

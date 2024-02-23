@@ -20,7 +20,6 @@ class ProductController
         $number_page = $num_products/$records_per_page;
 
         $categories = Category::getAll();
-        $list_products = Product::getAll();
         require 'views/products/index.php';
     }
 

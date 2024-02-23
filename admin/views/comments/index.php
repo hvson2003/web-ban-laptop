@@ -46,7 +46,7 @@
 </div>
 <script>
     function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa property có id là " + id + " không?")) {
+        if (confirm("Bạn có chắc chắn muốn xóa bình luận có id là " + id + " không?")) {
             document.getElementById('deleteForm-' + id).submit();
         }
     }

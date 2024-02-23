@@ -18,7 +18,7 @@ class Slide{
     public static function getAll()
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $query = $db->query('SELECT * FROM comments');
+        $query = $db->query('SELECT * FROM slides');
         $list = [];
         while ($row = $query->fetch_assoc()) {
             $list[] = $row;
@@ -30,7 +30,7 @@ class Slide{
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         $list = [];
-        $sql = "SELECT * FROM comments WHERE id = " . $id;
+        $sql = "SELECT * FROM slides WHERE id = " . $id;
         $result = $db->query($sql);
         while ($row = $result->fetch_assoc()) {
             $list = $row;
@@ -40,7 +40,7 @@ class Slide{
 
     public function save()
     {
-        $query = $this->db->prepare('INSERT INTO comments (title, sub_title, slide_desc, image_url, button_title, button_url) 
+        $query = $this->db->prepare('INSERT INTO slides (title, sub_title, slide_desc, image_url, button_title, button_url) 
                     VALUES (:title, :sub_title, :slide_desc, :image_url, :button_title, :button_url)');
         $query->bindParam(':title', $this->title, PDO::PARAM_STR);
         $query->bindParam(':sub_title', $this->sub_title, PDO::PARAM_STR);
@@ -53,7 +53,7 @@ class Slide{
 
     public function update($id)
     {
-        $query = $this->db->prepare('UPDATE comments SET title = :title, sub_title = :sub_title, slide_desc = :slide_desc, 
+        $query = $this->db->prepare('UPDATE slides SET title = :title, sub_title = :sub_title, slide_desc = :slide_desc, 
                     image_url = :image_url, button_title = :button_title, button_url = :button_url WHERE id = :id');
         $query->bindParam(':id', $id);
         $query->bindParam(':title', $this->title, PDO::PARAM_STR);
@@ -68,7 +68,7 @@ class Slide{
     public static function delete($id)
     {
         $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
-        $query = $db->prepare('DELETE FROM comments WHERE id = :id');
+        $query = $db->prepare('DELETE FROM slides WHERE id = :id');
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->execute();
     }
@@ -80,7 +80,6 @@ class Slide{
         $this->id = $id;
     }
 
-    // Getter và Setter cho $title
     public function getTitle() {
         return $this->title;
     }
@@ -89,7 +88,6 @@ class Slide{
         $this->title = $title;
     }
 
-    // Getter và Setter cho $sub_title
     public function getSubTitle() {
         return $this->sub_title;
     }
@@ -98,7 +96,6 @@ class Slide{
         $this->sub_title = $sub_title;
     }
 
-    // Getter và Setter cho $slide_desc
     public function getSlideDesc() {
         return $this->slide_desc;
     }
@@ -107,7 +104,6 @@ class Slide{
         $this->slide_desc = $slide_desc;
     }
 
-    // Getter và Setter cho $image_url
     public function getImageUrl() {
         return $this->image_url;
     }
@@ -116,7 +112,6 @@ class Slide{
         $this->image_url = $image_url;
     }
 
-    // Getter và Setter cho $button_title
     public function getButtonTitle() {
         return $this->button_title;
     }
@@ -125,7 +120,6 @@ class Slide{
         $this->button_title = $button_title;
     }
 
-    // Getter và Setter cho $button_url
     public function getButtonUrl() {
         return $this->button_url;
     }

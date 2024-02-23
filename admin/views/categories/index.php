@@ -1,7 +1,7 @@
 <?=template_header('Danh Mục')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=category" class="create-contact">Create category</a>
+	<a href="index.php?action=create&controller=category" class="create-contact">Create Category</a>
 	<table>
         <thead>
             <tr>
@@ -46,7 +46,7 @@
 </div>
 <script>
     function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa property có id là " + id + " không?")) {
+        if (confirm("Bạn có chắc chắn muốn xóa danh mục có id là " + id + " không?")) {
             document.getElementById('deleteForm-' + id).submit();
         }
     }

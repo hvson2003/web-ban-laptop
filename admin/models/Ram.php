@@ -39,7 +39,7 @@ class Color{
   {
       $query = $this->db->prepare('INSERT INTO rams (id, name, value) 
                   VALUES (:id, :name, :value)');
-      $query->bindParam(':id', $this->id, PDO::PARAM_STR);
+      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
       $query->bindParam(':name', $this->name, PDO::PARAM_STR);
       $query->bindParam(':value', $this->value, PDO::PARAM_STR);
       $query->execute();
@@ -48,7 +48,7 @@ class Color{
   public function update($id)
   {
       $query = $this->db->prepare('UPDATE rams SET id = :id, name = :name, value = :value WHERE id = :id');
-      $query->bindParam(':id', $this->id, PDO::PARAM_STR);
+      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
       $query->bindParam(':name', $this->name, PDO::PARAM_STR);
       $query->bindParam(':value', $this->value, PDO::PARAM_STR); 
       $query->execute();

@@ -9,14 +9,14 @@ class ColorController
         $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 
         $records_per_page = 5;
-        $stmt = $pdo->prepare('SELECT * FROM color ORDER BY id DESC LIMIT :current_page, :record_per_page');
+        $stmt = $pdo->prepare('SELECT * FROM colors ORDER BY id DESC LIMIT :current_page, :record_per_page');
         $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
         $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
         $stmt->execute();
 
         $color = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $num_color$color = $pdo->query('SELECT COUNT(*) FROM color')->fetchColumn();
-        $number_page = $num_color$color/$records_per_page;
+        $num_color = $pdo->query('SELECT COUNT(*) FROM colors')->fetchColumn();
+        $number_page = $num_color/$records_per_page;
 
         $color = Color::getAll();
         require 'views/color/index.php'; //them index view color
@@ -30,8 +30,8 @@ class ColorController
     public function store()
     {
         $color = new Color();
-        $color->setColorId(isset($_POST['ColorId']) ? $_POST['ColorId'] : '');
-        $color->setProductId(isset($_POST['ProductId']) ? $_POST['ProductId'] : '');
+        $color->setColorId(isset($_POST['color_id']) ? $_POST['color_id'] : '');
+        $color->setProductId(isset($_POST['product_id']) ? $_POST['product_id'] : '');
         $color->save();
         header('Location: index.php?controller=color&action=index');
     }
@@ -54,15 +54,15 @@ class ColorController
     {
         $id = $_POST['id'];
         $color = new Color();
-        $color->setColorId(isset($_POST['ColorId']) ? $_POST['ColorId'] : '');
-        $color->setProductId(isset($_POST['ProductId']) ? $_POST['ProductId'] : '');
+        $color->setColorId(isset($_POST['color_id']) ? $_POST['color_id'] : '');
+        $color->setProductId(isset($_POST['product_id']) ? $_POST['product_id'] : '');
         $color->update($id);
         header('Location: index.php?controller=color&action=index');
     }
     public function delete()
     {
         $id = $_GET['id'];
-        color::delete($id);
+        Color::delete($id);
         header('Location: index.php?controller=color&action=index');
     }
 }

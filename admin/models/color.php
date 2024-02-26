@@ -1,5 +1,5 @@
 <?php
-class color{
+class Color{
   //`id`, `color_id`, `product_id`
   private $id;
   private $colorId;
@@ -61,45 +61,29 @@ class color{
       $query->bindParam(':id', $id, PDO::PARAM_INT);
       $query->execute();
   }
-  public function getName() {
-      return $this->name;
-  }
+     // Getter for $id
+     public function getId() {
+        return $this->id;
+    }
 
-  public function setName($name) {
-      $this->name = $name;
-  }
+    // Getter for $colorId
+    public function getColorId() {
+        return $this->colorId;
+    }
 
-  public function getEmail() {
-      return $this->email;
-  }
+    // Setter for $colorId
+    public function setColorId($colorId) {
+        $this->colorId = $colorId;
+    }
 
-  public function setEmail($email) {
-      $this->email = $email;
-  }
+    // Getter for $productId
+    public function getProductId() {
+        return $this->productId;
+    }
 
-  public function getContent() {
-      return $this->content;
-  }
-
-  public function setContent($content) {
-      $this->content = $content;
-  }
-
-  public function getCreatedAt() {
-      return $this->created_at;
-  }
-
-  public function setCreatedAt($created_at) {
-      $this->created_at = $created_at;
-  }
-
-  public function getProductId() {
-      return $this->product_id;
-  }
-
-  public function setProductId($product_id) {
-      $this->product_id = $product_id;
-  }
-
+    // Setter for $productId
+    public function setProductId($productId) {
+        $this->productId = $productId;
+    }
 
 }

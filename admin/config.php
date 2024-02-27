@@ -50,6 +50,7 @@ function template_footer() {
     echo <<<EOT
         </body>
     </html>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
     EOT;
 }
 ?>

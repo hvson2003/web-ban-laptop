@@ -31,13 +31,26 @@ class BlogController
 
     public function store()
     {
+        $file_temp = $_FILES['thumbnail']['tmp_name'];
+        $file_name = $_FILES['thumbnail']['name'];
+        
+        // Đường dẫn tạm thời của tệp ảnh đã tải lên
+        $file_temp = $_FILES['thumbnail']['tmp_name'];
+
+        // Đường dẫn mới cho tệp ảnh
+        $file_name = $_FILES['thumbnail']['name'] ? $_FILES['thumbnail']['name'] : '';
+        $link_img = "assets/uploads/" . $file_name;
+
+        $target_path = '../' . $link_img;
+        move_uploaded_file($file_temp, $target_path);
+        
         $blog = new Blog();
         $blog->setTitle(isset($_POST['title']) ? $_POST['title'] : '');
         $blog->setContent(isset($_POST['content']) ? $_POST['content'] : '');
         $blog->setBlogDesc(isset($_POST['blog_desc']) ? $_POST['blog_desc'] : '');
         $blog->setCreateAt(isset($_POST['created_at']) ? $_POST['created_at'] : '');
         $blog->setUserId(isset($_POST['user_id']) ? $_POST['user_id'] : '');
-        $blog->setThumbnail(isset($_POST['thumbnail']) ? $_POST['thumbnail'] : '');
+        $blog->setThumbnail($link_img);
         $blog->save();
 
         header('Location: index.php?controller=blog&action=index');
@@ -64,14 +77,25 @@ class BlogController
     public function update()
     {
         $id = $_POST['id'];
+        $file_temp = $_FILES['thumbnail']['tmp_name'];
+        $file_name = $_FILES['thumbnail']['name'];
+        
+        // Đường dẫn tạm thời của tệp ảnh đã tải lên
+        $file_temp = $_FILES['thumbnail']['tmp_name'];
 
+        // Đường dẫn mới cho tệp ảnh
+        $file_name = $_FILES['thumbnail']['name'] ? $_FILES['thumbnail']['name'] : '';
+        $link_img = "assets/uploads/" . $file_name;
+
+        $target_path = '../' . $link_img;
+        move_uploaded_file($file_temp, $target_path);
         $blog = new Blog();
         $blog->setTitle(isset($_POST['title']) ? $_POST['title'] : '');
         $blog->setContent(isset($_POST['content']) ? $_POST['content'] : '');
         $blog->setBlogDesc(isset($_POST['blog_desc']) ? $_POST['blog_desc'] : '');
         $blog->setCreateAt(date('Y-m-d H:i:s'));
         $blog->setUserId(isset($_POST['user_id']) ? $_POST['user_id'] : '');
-        $blog->setThumbnail(isset($_POST['thumbnail']) ? $_POST['thumbnail'] : '');
+        $blog->setThumbnail($link_img);
 
         $blog->update($id);
 

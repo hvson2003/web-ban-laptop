@@ -31,7 +31,7 @@
                 <td><?=$product['name']?></td>
                 <td><?=$product['price']?></td>
                 <td><?=$product['sale_price']?></td>
-                <td><?=$product['thumbnail']?></td>
+                <td><img src="../<?=$product['thumbnail']?>" width="200"></td>
                 <!-- <td><?=$product['product_desc']?></td> -->
                 <!-- <td><?=$product['detail_desc']?></td> -->
                 <!-- <td><?=$product['chipset']?></td>

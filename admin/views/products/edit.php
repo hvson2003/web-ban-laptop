@@ -23,7 +23,8 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Thumbnail</span>
-                        <input type="text" class="form-control" value=<?= $product['thumbnail'] ?> required name="thumbnail">
+                        <input type="file" class="form-control" accept=".jpg, .png, .jpeg" value=<?= $product['thumbnail'] ?> required name="thumbnail">
+                        <img src="../<?=$product['thumbnail']?>" width="200">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Product Description</span>

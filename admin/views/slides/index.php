@@ -22,7 +22,7 @@
                 <td><?=$slide['title']?></td>
                 <td><?=$slide['sub_title']?></td>
                 <td><?=$slide['slide_desc']?></td>
-                <td><?=$slide['image_url']?></td>
+                <td><img src="../<?=$slide['image_url']?>" width="200"></td>
                 <td><?=$slide['button_title']?></td>
                 <td><?=$slide['button_url']?></td>
                 <td class="actions">

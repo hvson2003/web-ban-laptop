@@ -19,7 +19,7 @@
                 <td><?=$blog['id']?></td>
                 <td><?=$blog['title']?></td>
                 <td><?=$blog['blog_desc']?></td>
-                <td><?=$blog['thumbnail']?></td>
+                <td><img src="../<?=$blog['thumbnail']?>" width="200"></td>
                 <td>
                     <?php
                         for ($i = 0; $i < count($users); $i++){

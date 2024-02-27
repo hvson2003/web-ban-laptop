@@ -5,23 +5,31 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold">Thêm  Bài Viết</h3>
-                <form action="index.php?controller=blog&action=store" method="post">
+                <form action="index.php?controller=blog&action=store" method="post" enctype="multipart/form-data">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Title</span>
-                        <textarea type="text" style="width: 300px; height: 30px;" class="form-control" name="blog_desc" required>1</textarea>
+                        <input type="text" class="form-control" required value="1" name="title" style="width: 1000px; height: 30px;">
                     </div>
+                    </br>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Content</span>
-                        <textarea type="text" style="width: 300px; height: 150px;" class="form-control" name="content" required>1</textarea>
+                        <textarea id="content" type="text" style="width: 500px; height: 300px;" class="form-control" name="content" required>1</textarea>
+                    </div>
+                    </br>
+                    <div class="input-group mt-3 mb-3">
+                        <span class="input-group-text">Blog Description</span>
+                        <input type="text" class="form-control" required value="1" name="blog_desc">
+                    </div>
+                    </br>
+                    <div class="input-group mt-3 mb-3">
+                        <span class="input-group-text">Thumbnail</span>
+                        <input type="file" class="form-control" accept=".jpg, .png, .jpeg" required name="thumbnail">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Blog Description</span>
-                        <textarea type="text" style="width: 500px; height: 300px;" class="form-control" name="detail_desc" required>1</textarea>
+                        <input type="text" class="form-control" required value="1" name="blog_desc">
                     </div>
-                    <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Thumbnail</span>
-                        <input type="text" class="form-control" required name="thumbnail">
-                    </div>
+                    </br>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">
                         <a href="index.php?controller=blog&action=index" class="btn btn-warning ">Quay lại</a>
@@ -32,5 +40,12 @@
     </main>
 </body>
 </html>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 
 <?=template_footer()?>

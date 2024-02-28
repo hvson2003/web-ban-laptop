@@ -28,26 +28,47 @@ function template_header($title) {
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         </head>
         <body>
+        
         <nav class="navtop">
             <div>
                 <h1>ADMIN</h1>
-                <a href="#">Blogs</a>
-                <a href="#">Categories</a>
-                <a href="#">Colors</a>
-                <a href="#">Comments</a>
-                <a href="#">Configs</a>
-                <a href="#">Memories</a>
-                <a href="#">Orders</a>
-                <a href="index.php?action=index&controller=product">Products</a>
-                <a href="#">Rams</a>
-                <a href="#">Slides</a>
                 <a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i>Users</a>
             </div>
+           
         </nav>
+
+        
+        
+      <div class="sidebar">
+            <div>
+            <a href="#">Blogs</a>
+            </div>
+            <div>
+                <a href="#">Categories</a>
+            </div>
+            <div>
+                <a href="#">Colors</a>
+            </div>
+            <div>
+                <a href="#">Comments</a>
+            </div>
+            <div> <a href="#">Configs</a></div>
+            <div>
+            <a href="#">Memories</a>
+            </div>
+            <div> <a href="#">Orders</a></div>
+            <div><a href="index.php?action=index&controller=product">Products</a></div>
+            <div> <a href="#">Rams</a></div>
+            <div>     <a href="#">Slides</a></div>
+         
+       
+        </div>
+
     EOT;
 }
 function template_footer() {
     echo <<<EOT
+    
         </body>
     </html>
     EOT;

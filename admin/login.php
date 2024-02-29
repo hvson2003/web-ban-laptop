@@ -11,7 +11,7 @@ if ( mysqli_connect_errno() ) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password FROM users WHERE role=0 AND username = ?')) {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	$stmt->store_result();

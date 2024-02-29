@@ -39,26 +39,16 @@ function template_header($title) {
         
         
       <div class="sidebar">
-            <div>
-            <a href="#">Blogs</a>
-            </div>
-            <div>
-                <a href="#">Categories</a>
-            </div>
-            <div>
-                <a href="#">Colors</a>
-            </div>
-            <div>
-                <a href="#">Comments</a>
-            </div>
-            <div> <a href="#">Configs</a></div>
-            <div>
-            <a href="#">Memories</a>
-            </div>
-            <div> <a href="#">Orders</a></div>
+            <div><a href="index.php?action=index&controller=blog">Blogs</a></div>
+            <div><a href="index.php?action=index&controller=category">Categories</a></div>
+            <div><a href="index.php?action=index&controller=color">Colors</a></div>
+            <div><a href="index.php?action=index&controller=comment">Comments</a></div>
+            <div><a href="index.php?action=index&controller=config">Configs</a></div>
+            <div><a href="index.php?action=index&controller=memory">Memories</a></div>
+            <div><a href="index.php?action=index&controller=order">Orders</a></div>
             <div><a href="index.php?action=index&controller=product">Products</a></div>
-            <div> <a href="#">Rams</a></div>
-            <div>     <a href="#">Slides</a></div>
+            <div><a href="index.php?action=index&controller=ram">Rams</a></div>
+            <div><a href="index.php?action=index&controller=slide">Slides</a></div>
          
        
         </div>

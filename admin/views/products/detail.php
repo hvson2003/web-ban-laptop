@@ -1,12 +1,12 @@
 <?=template_header('Chi Tiết Sản Phẩm')?>
 
 <body>
-    <main class="container mt-5 mb-5">
+    <main class="container mt-5 mb-5 ">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold">Chi Tiết Sản Phẩm</h3>
-                <form action="index.php?controller=product&action=update" method="post">
-                    <div class="input-group mt-3 mb-3">
+                <h3 class="text-center text-uppercase fw-bold title_detail">Chi Tiết Sản Phẩm</h3>
+                <form class="border shadow p-5 form_detail" action="index.php?controller=product&action=update" method="post">
+                    <div class="input-group  mb-3">
                         <input type="text" class="form-control" value=<?= $product['id'] ?> name="id" hidden>
                     </div>
                     <div class="input-group mt-3 mb-3">

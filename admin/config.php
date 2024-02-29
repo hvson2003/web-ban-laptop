@@ -24,30 +24,50 @@ function template_header($title) {
             <meta charset="utf-8">
             <title>$title</title>
             <link href="style.css" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" href="./CSS/detail.css">
-
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         </head>
         <body>
+        
         <nav class="navtop">
             <div>
                 <h1>ADMIN</h1>
-                <a href="index.php?action=index&controller=blog">Blogs</a>
-                <a href="index.php?action=index&controller=category">Categories</a>
-                <a href="index.php?action=index&controller=color">Colors</a>
-                <a href="index.php?action=index&controller=comment">Comments</a>
-                <a href="index.php?action=index&controller=memories">Memories</a>
-                <a href="index.php?action=index&controller=order">Orders</a>
-                <a href="index.php?action=index&controller=product">Products</a>
-                <a href="index.php?action=index&controller=ram">Rams</a>
-                <a href="index.php?action=index&controller=slide">Slides</a>
                 <a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i>Users</a>
             </div>
         </nav>
+
+        
+        
+      <div class="sidebar">
+            <div>
+            <a href="#">Blogs</a>
+            </div>
+            <div>
+                <a href="#">Categories</a>
+            </div>
+            <div>
+                <a href="#">Colors</a>
+            </div>
+            <div>
+                <a href="#">Comments</a>
+            </div>
+            <div> <a href="#">Configs</a></div>
+            <div>
+            <a href="#">Memories</a>
+            </div>
+            <div> <a href="#">Orders</a></div>
+            <div><a href="index.php?action=index&controller=product">Products</a></div>
+            <div> <a href="#">Rams</a></div>
+            <div>     <a href="#">Slides</a></div>
+         
+       
+        </div>
+
     EOT;
 }
 function template_footer() {
     echo <<<EOT
+    
         </body>
     </html>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>

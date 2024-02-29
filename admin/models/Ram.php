@@ -1,5 +1,5 @@
 <?php
-class Color{
+class Ram{
   //`id`, `color_id`, `product_id`
   private $id;
   private $name;

@@ -32,11 +32,9 @@ function template_header($title) {
         <nav class="navtop">
             <div>
                 <h1>ADMIN</h1>
-                <a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i>Users</a>
+                <div><a href="logout.php">Đăng xuất</a></div>
             </div>
-        </nav>
-
-        
+        </nav> 
         
       <div class="sidebar">
             <div><a href="index.php?action=index&controller=blog">Blogs</a></div>
@@ -49,8 +47,7 @@ function template_header($title) {
             <div><a href="index.php?action=index&controller=product">Products</a></div>
             <div><a href="index.php?action=index&controller=ram">Rams</a></div>
             <div><a href="index.php?action=index&controller=slide">Slides</a></div>
-         
-       
+            <div><a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i> Users</a></div>
         </div>
 
     EOT;

@@ -31,7 +31,7 @@
                 <td><?=$product['name']?></td>
                 <td><?=$product['price']?></td>
                 <td><?=$product['sale_price']?></td>
-                <td><?=$product['thumbnail']?></td>
+                <td><img src="../<?=$product['thumbnail']?>" width="200"></td>
                 <!-- <td><?=$product['product_desc']?></td> -->
                 <!-- <td><?=$product['detail_desc']?></td> -->
                 <!-- <td><?=$product['chipset']?></td>
@@ -76,7 +76,7 @@
 </div>
 <script>
     function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa property có id là " + id + " không?")) {
+        if (confirm("Bạn có chắc chắn muốn xóa sản phẩm có id là " + id + " không?")) {
             document.getElementById('deleteForm-' + id).submit();
         }
     }

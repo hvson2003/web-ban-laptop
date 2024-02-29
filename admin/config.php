@@ -34,7 +34,6 @@ function template_header($title) {
                 <h1>ADMIN</h1>
                 <a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i>Users</a>
             </div>
-           
         </nav>
 
         
@@ -71,6 +70,7 @@ function template_footer() {
     
         </body>
     </html>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
     EOT;
 }
 ?>

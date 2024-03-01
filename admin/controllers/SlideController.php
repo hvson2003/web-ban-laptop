@@ -30,11 +30,12 @@ class SlideController
     public function store()
     {
         $slide = new Slide();
-        $slide->setName(isset($_POST['name']) ? $_POST['name'] : '');
-        $slide->setEmail(isset($_POST['email']) ? $_POST['email'] : '');
-        $slide->setContent(isset($_POST['content']) ? $_POST['content'] : '');
-        $slide->setCreatedAt(isset($_POST['created_at']) ? $_POST['created_at'] : '');
-        $slide->setProductId(isset($_POST['product_id']) ? $_POST['product_id'] : '');
+        $slide->setTitle(isset($_POST['title']) ? $_POST['title'] : '');
+        $slide->setSubTitle(isset($_POST['sub_title']) ? $_POST['sub_title'] : '');
+        $slide->setSlideDesc(isset($_POST['slide_desc']) ? $_POST['slide_desc'] : '');
+        $slide->setImageUrl(isset($_POST['image_url']) ? $_POST['image_url'] : '');
+        $slide->setButtonTitle(isset($_POST['button_title']) ? $_POST['button_title'] : '');
+        $slide->setButtonUrl(isset($_POST['button_url']) ? $_POST['button_url'] : '');
         $slide->save();
         header('Location: index.php?controller=slide&action=index');
     }
@@ -58,11 +59,12 @@ class SlideController
         $id = $_POST['id'];
 
         $slide = new Slide();
-        $slide->setName(isset($_POST['name']) ? $_POST['name'] : '');
-        $slide->setEmail(isset($_POST['email']) ? $_POST['email'] : '');
-        $slide->setContent(isset($_POST['content']) ? $_POST['content'] : '');
-        $slide->setCreatedAt(isset($_POST['created_at']) ? $_POST['created_at'] : '');
-        $slide->setProductId(isset($_POST['product_id']) ? $_POST['product_id'] : '');
+        $slide->setTitle(isset($_POST['title']) ? $_POST['title'] : '');
+        $slide->setSubTitle(isset($_POST['sub_title']) ? $_POST['sub_title'] : '');
+        $slide->setSlideDesc(isset($_POST['slide_desc']) ? $_POST['slide_desc'] : '');
+        $slide->setImageUrl(isset($_POST['image_url']) ? $_POST['image_url'] : '');
+        $slide->setButtonTitle(isset($_POST['button_title']) ? $_POST['button_title'] : '');
+        $slide->setButtonUrl(isset($_POST['button_url']) ? $_POST['button_url'] : '');
         $slide->update($id);
 
         header('Location: index.php?controller=slide&action=index');

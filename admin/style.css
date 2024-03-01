@@ -15,6 +15,10 @@ body {
     height: 60px;
     width: 100%;
     border: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
 .navtop div {
     display: flex;
@@ -47,8 +51,11 @@ body {
     color: #ecf0f6;
 }
 .content {
-    width: 1000px;
+    width: calc(100% - 555px);
     margin: 0 auto;
+    margin-top: 60px;
+    padding: 0 15px;
+    box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.2);
 }
 .content h2 {
     margin: 0;
@@ -199,4 +206,91 @@ body {
 }
 .delete .yesno a:hover {
     background-color: #32a367;
+}
+.sidebar{
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 215px;
+    z-index: 200;
+    background-color: rgb(27, 27, 27);
+    border: 2px solid #007bff;
+    
+}
+.sidebar div a{
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+    font-size: 16px;
+}
+.sidebar div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    height: 40px;
+    border-radius: 8px;
+}
+.sidebar div:hover{
+    background-color: #474747;
+    border: 2px solid #00ff15;
+}
+.sidebar div a:hover{
+    color: rgb(255, 255, 255);
+
+}
+.form_edit , .form_detail ,.form_create {
+    width: 90%;
+    margin: 0 150px;
+}
+.title_edit , .title_detail , .title_create{
+    margin-top: 20px;
+}
+
+@media only screen  and (max-width : 1360px) {
+    .content {
+        width: calc(100% - 255px);
+        margin: 0 auto;
+        margin-top: 60px;
+        padding: 0 15px;
+        box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.2);
+        
+    }
+    .sidebar{
+        width: 120px;
+        
+    }
+    .read table {
+        width: 70%;
+        
+    }
+}
+@media only screen  and (max-width : 1210px) {
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 60px;
+        padding: 0 15px;
+        box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.2);
+    }
+    .sidebar{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: 100%;
+        height: fit-content;
+        z-index: 200;
+        background-color: rgb(27, 27, 27);
+        border: 2px solid #007bff;
+        
+    }
+    .read table {
+        width: 50%;
+        
+    }
 }

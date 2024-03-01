@@ -7,7 +7,6 @@
             <tr>
                 <td>#</td>
                 <td>Title</td>
-                <td>Content</td>
                 <td>Blog Description</td>
                 <td>Thumbnail</td>
                 <td>User</td>
@@ -19,9 +18,8 @@
             <tr>
                 <td><?=$blog['id']?></td>
                 <td><?=$blog['title']?></td>
-                <td><?=$blog['content']?></td>
                 <td><?=$blog['blog_desc']?></td>
-                <td><?=$blog['thumbnail']?></td>
+                <td><img src="../<?=$blog['thumbnail']?>" width="200"></td>
                 <td>
                     <?php
                         for ($i = 0; $i < count($users); $i++){
@@ -56,7 +54,7 @@
 </div>
 <script>
     function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa property có id là " + id + " không?")) {
+        if (confirm("Bạn có chắc chắn muốn xóa blog có id là " + id + " không?")) {
             document.getElementById('deleteForm-' + id).submit();
         }
     }

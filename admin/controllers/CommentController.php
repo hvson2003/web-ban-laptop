@@ -1,5 +1,6 @@
 <?php
 include("models/comment.php");
+include("models/product.php");
 
 class CommentController
 {
@@ -18,6 +19,7 @@ class CommentController
         $num_comments = $pdo->query('SELECT COUNT(*) FROM comments')->fetchColumn();
         $number_page = $num_comments/$records_per_page;
 
+        $products = Product::getAll();
         $comments = Comment::getAll();
         require 'views/comments/index.php';
     }
@@ -49,6 +51,7 @@ class CommentController
     public function detail()
     {
         $id = $_GET['id'];
+        $products = Product::getAll();
         $comment = Comment::getById($id);
         require 'views/comments/detail.php';
     }

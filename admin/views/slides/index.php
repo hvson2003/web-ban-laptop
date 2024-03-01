@@ -1,6 +1,7 @@
 <?=template_header('Slide')?>
 
 <div class="content read">
+    <a href="index.php?action=create&controller=slide" class="create-contact">Create Slide</a>
 	<table>
         <thead>
             <tr>
@@ -21,11 +22,14 @@
                 <td><?=$slide['title']?></td>
                 <td><?=$slide['sub_title']?></td>
                 <td><?=$slide['slide_desc']?></td>
-                <td><?=$slide['image_url']?></td>
+                <td><img src="../<?=$slide['image_url']?>" width="200"></td>
                 <td><?=$slide['button_title']?></td>
                 <td><?=$slide['button_url']?></td>
                 <td class="actions">
                     <a href="index.php?action=detail&controller=slide&id=<?=$slide['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
+                </td>
+                <td class="actions">
+                    <a href="index.php?action=edit&controller=slide&id=<?=$slide['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                 </td>
                 <td class="actions">
                     <a href="#" class="trash" onclick="confirmDelete(<?=$slide['id']?>)"><i class="fas fa-trash fa-xs"></i></a>                    
@@ -48,7 +52,7 @@
 </div>
 <script>
     function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa property có id là " + id + " không?")) {
+        if (confirm("Bạn có chắc chắn muốn xóa slide có id là " + id + " không?")) {
             document.getElementById('deleteForm-' + id).submit();
         }
     }

@@ -21,7 +21,15 @@
                 <td><?=$comment['email']?></td>
                 <td><?=$comment['content']?></td>
                 <td><?=$comment['created_at']?></td>
-                <td><?=$comment['product_id']?></td>
+                <td>
+                    <?php 
+                    foreach($products as $product){
+                        if($product['id']==$comment['product_id']){
+                            echo $product['name'];
+                        }
+                    }    
+                    ?>
+                </td>
                 <td class="actions">
                     <a href="index.php?action=detail&controller=comment&id=<?=$comment['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
                 </td>
@@ -46,7 +54,7 @@
 </div>
 <script>
     function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa property có id là " + id + " không?")) {
+        if (confirm("Bạn có chắc chắn muốn xóa bình luận có id là " + id + " không?")) {
             document.getElementById('deleteForm-' + id).submit();
         }
     }

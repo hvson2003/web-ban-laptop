@@ -8,7 +8,7 @@
                 <form action="index.php?controller=category&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Name</span>
-                        <input type="text" class="form-control" value=1 required name="name">
+                        <input type="text" class="form-control" required name="name">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Category Description</span>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Thumbnail</span>
-                        <input type="text" class="form-control" value=1 required name="thumbnail">
+                        <input type="text" class="form-control" required name="thumbnail">
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">

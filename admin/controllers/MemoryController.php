@@ -31,7 +31,7 @@ class MemoryController
     {
         $memory = new Memory();
         $memory->setMemoryName(isset($_POST['name']) ? $_POST['name'] : '');
-        $memory->setMemoryValue(isset($_POST['value']) ? $_POST['value'] : '')
+        $memory->setMemoryValue(isset($_POST['value']) ? $_POST['value'] : '');
         $memory->save();
         header('Location: index.php?controller=memory&action=index');
     }
@@ -55,7 +55,7 @@ class MemoryController
         $id = $_POST['id'];
         $memory = new Memory();
         $memory->setMemoryName(isset($_POST['name']) ? $_POST['name'] : '');
-        $memory->setMemoryValue(isset($_POST['value']) ? $_POST['value'] : '')
+        $memory->setMemoryValue(isset($_POST['value']) ? $_POST['value'] : '');
         $memory->update($id);
         header('Location: index.php?controller=memory&action=index');
     }

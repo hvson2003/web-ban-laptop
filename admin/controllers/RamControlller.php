@@ -31,7 +31,7 @@ class RamController
     {
         $ram = new Ram();
         $ram->setRamName(isset($_POST['name']) ? $_POST['name'] : '');
-        $ram->setRamValue(isset($_POST['value']) ? $_POST['value'] : '')
+        $ram->setRamValue(isset($_POST['value']) ? $_POST['value'] : '');
         $ram->save();
         header('Location: index.php?controller=ram&action=index');
     }
@@ -55,7 +55,7 @@ class RamController
         $id = $_POST['id'];
         $ram = new Ram();
         $ram->setRamName(isset($_POST['name']) ? $_POST['name'] : '');
-        $ram->setRamValue(isset($_POST['value']) ? $_POST['value'] : '')
+        $ram->setRamValue(isset($_POST['value']) ? $_POST['value'] : '');
         $ram->update($id);
         header('Location: index.php?controller=ram&action=index');
     }

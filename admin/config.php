@@ -17,12 +17,12 @@ function pdo_connect_mysql() {
     }
 }
 function template_header($title) {
-    echo <<<EOT
+    echo '
     <!DOCTYPE html>
     <html>
         <head>
             <meta charset="utf-8">
-            <title>$title</title>
+            <title>' . $title . '</title>
             <link href="style.css" rel="stylesheet" type="text/css">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -32,6 +32,7 @@ function template_header($title) {
         <nav class="navtop">
             <div>
                 <h1>ADMIN</h1>
+                <div><a href="index.php?action=index&controller=user">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
                 <div><a href="logout.php">Đăng xuất</a></div>
             </div>
         </nav> 
@@ -50,7 +51,7 @@ function template_header($title) {
             <div><a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i> Users</a></div>
         </div>
 
-    EOT;
+    ';
 }
 function template_footer() {
     echo <<<EOT

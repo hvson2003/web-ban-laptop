@@ -46,6 +46,15 @@ class Order{
       return $list; 
   }
   
+  public static function getRevenue()
+  {
+      $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+      $result = $db->query('SELECT SUM(total) as revenue FROM orders ORDER BY id');
+      $row = $result->fetch_assoc();
+      $revenue = $row['revenue'];
+      $db->close();
+      return $revenue;
+  }
   public function save()
   {
       $query = $this->db->prepare('INSERT INTO orders (id, fullname, email,phone,address,note,created_at,payment,total,quantity,item,payed,active,user_id) 

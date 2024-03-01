@@ -24,7 +24,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE role=0 AND usern
             $_SESSION['logined'] = true;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('Location: index.php?action=index&controller=product');
+            header('Location: index.php?action=index&controller=dashboard');
         } else {
             echo 'Incorrect password!';
         }

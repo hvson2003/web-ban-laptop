@@ -38,6 +38,7 @@ function template_header($title) {
         </nav> 
         
       <div class="sidebar">
+            <div><a href="index.php?action=index&controller=dashboard">Dashboard</a></div>
             <div><a href="index.php?action=index&controller=blog">Blogs</a></div>
             <div><a href="index.php?action=index&controller=category">Categories</a></div>
             <div><a href="index.php?action=index&controller=color">Colors</a></div>

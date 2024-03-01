@@ -16,7 +16,7 @@ class User{
         $this->db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
-    
+
     public static function getAll()
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -28,6 +28,25 @@ class User{
         return $list;
     }
 
+    public static function getCountSaler()
+    {
+        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $result = $db->query('SELECT COUNT(*) as saler_count FROM users WHERE role = 1');
+        $row = $result->fetch_assoc();
+        $saler_count = $row['saler_count'];
+        $db->close();
+        return $saler_count;
+    }
+    public static function getCountUser()
+    {
+        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $result = $db->query('SELECT COUNT(*) as user_count FROM users WHERE role = 2');
+        $row = $result->fetch_assoc();
+        $user_count = $row['user_count'];
+        $db->close();
+        return $user_count;
+    }
+    
     public static function getById($id)
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

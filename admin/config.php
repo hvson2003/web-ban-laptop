@@ -32,7 +32,7 @@ function template_header($title) {
         <nav class="navtop">
             <div>
                 <h1>ADMIN</h1>
-                <div><a href="index.php?action=index&controller=user">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
+                <div><a href="index.php?action=getInforUser&controller=user&id=' . $_SESSION['id'] . '">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
                 <div><a href="logout.php">Đăng xuất</a></div>
             </div>
         </nav> 

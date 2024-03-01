@@ -6,17 +6,17 @@
         <thead>
             <tr>
                 <td>#</td>
-                <td>color_id</td>
-                <td>product_id</td>
+                <td>Name</td>
+                <td>Value</td>
                 <td colspan="3">Action</td>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($a as $color): ?>
+            <?php foreach ($color as $a): ?>
             <tr>
                 <td><?=$a['id']?></td>
-                <td><?=$a['color_id']?></td>
-                <td><?=$a['product_id']?></td>
+                <td><?=$a['name']?></td>
+                <td><?=$a['value']?></td>
                 <td class="actions">
                     <a href="index.php?action=edit&controller=color&id=<?=$a['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                 </td>

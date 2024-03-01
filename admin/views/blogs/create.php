@@ -4,8 +4,8 @@
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold">Thêm  Bài Viết</h3>
-                <form action="index.php?controller=blog&action=store" method="post" enctype="multipart/form-data">
+                <h3 class="text-center text-uppercase fw-bold title_create">Thêm  Bài Viết</h3>
+                <form class="form_create" action="index.php?controller=blog&action=store" method="post" enctype="multipart/form-data">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Title</span>
                         <input type="text" class="form-control" required value="1" name="title" style="width: 1000px; height: 30px;">

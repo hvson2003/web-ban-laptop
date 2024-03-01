@@ -85,5 +85,4 @@ class Color{
     public function setProductId($productId) {
         $this->productId = $productId;
     }
-
 }

@@ -26,29 +26,58 @@ function template_header($title) {
             <link href="style.css" rel="stylesheet" type="text/css">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+
         </head>
         <body>
         
         <nav class="navtop">
             <div>
-                <h1>ADMIN</h1>
+                <div><h1>ADMIN</h1></div>
                 <div><a href="index.php?action=index&controller=user">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
                 <div><a href="logout.php">Đăng xuất</a></div>
             </div>
         </nav> 
         
       <div class="sidebar">
-            <div><a href="index.php?action=index&controller=blog">Blogs</a></div>
-            <div><a href="index.php?action=index&controller=category">Categories</a></div>
-            <div><a href="index.php?action=index&controller=color">Colors</a></div>
-            <div><a href="index.php?action=index&controller=comment">Comments</a></div>
-            <div><a href="index.php?action=index&controller=config">Configs</a></div>
-            <div><a href="index.php?action=index&controller=memory">Memories</a></div>
-            <div><a href="index.php?action=index&controller=order">Orders</a></div>
-            <div><a href="index.php?action=index&controller=product">Products</a></div>
-            <div><a href="index.php?action=index&controller=ram">Rams</a></div>
-            <div><a href="index.php?action=index&controller=slide">Slides</a></div>
-            <div><a href="index.php?action=index&controller=user"><i class="fas fa-user-circle"></i> Users</a></div>
+            <div>
+                <i class="bi bi-bootstrap "  ></i>
+                <a href="index.php?action=index&controller=blog">Blogs</a>
+            </div>
+            <div>
+                <i class="bi bi-border-all"></i>
+                <a href="index.php?action=index&controller=category">Categories</a></div>
+            <div>
+                <i class="bi bi-magic"></i>
+                <a href="index.php?action=index&controller=color">Colors</a>
+            </div>
+            <div>
+                <i class="bi bi-chat-left-dots"></i>
+                <a href="index.php?action=index&controller=comment">Comments</a>
+            </div>
+            <div>
+                <i class="bi bi-gear"></i>
+                <a href="index.php?action=index&controller=config">Configs</a>
+            </div>
+            <div>
+                <i class="bi bi-memory"></i>
+                <a href="index.php?action=index&controller=memory">Memories</a>
+            </div>
+            <div>
+                <i class="bi bi-memory"></i>
+                <a href="index.php?action=index&controller=order">Orders</a>
+            </div>
+            <div>
+            <i class="bi bi-box"></i>
+            <a href="index.php?action=index&controller=product">Products</a></div>
+            <div>
+            <i class="bi bi-sd-card"></i><a href="index.php?action=index&controller=ram">Rams</a></div>
+            <div>
+            <i class="bi bi-file-easel"></i><a href="index.php?action=index&controller=slide">Slides</a></div>
+            <div>
+            <a href="index.php?action=index&controller=user">
+            <i class="fas fa-user-circle"></i> Users</a>
+            </div>
         </div>
 
     ';

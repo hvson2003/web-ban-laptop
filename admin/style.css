@@ -215,8 +215,8 @@ body {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
     width: 215px;
     z-index: 200;
-    background-color: rgb(27, 27, 27);
-    border: 2px solid #007bff;
+    background-color:  rgb(63, 105, 168);
+    border: 1px solid #acacac;
     
 }
 .sidebar div a{
@@ -233,8 +233,8 @@ body {
     border-radius: 8px;
 }
 .sidebar div:hover{
-    background-color: #474747;
-    border: 2px solid #00ff15;
+    background-color: #96c2ff;
+    border: 2px solid #1f1f1f;
 }
 .sidebar div a:hover{
     color: rgb(255, 255, 255);

@@ -12,11 +12,11 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($a as $ram): ?>
+            <?php foreach ($ram as $a): ?>
             <tr>
                 <td><?=$a['id']?></td>
-                <td><?=$a['Name']?></td>
-                <td><?=$a['Value']?></td>
+                <td><?=$a['name']?></td>
+                <td><?=$a['value']?></td>
                 <td class="actions">
                     <a href="index.php?action=edit&controller=ram&id=<?=$a['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                 </td>

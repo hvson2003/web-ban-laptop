@@ -7,7 +7,7 @@ include_once 'config.php';
 session_start();
 if($_SESSION["logined"] != true){ header("Location: index.html"); }
 
-$controller = isset($_GET['controller']) ? $_GET['controller'] : 'product';
+$controller = isset($_GET['controller']) ? $_GET['controller'] : 'dashboard';
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 
 $controllerClass = ucfirst($controller) . 'Controller';

@@ -33,15 +33,16 @@ function template_header($title) {
         
         <nav class="navtop">
             <div>
+
                 <div><h1>ADMIN</h1></div>
-                <div><a href="index.php?action=index&controller=user">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
+                <div><a href="index.php?action=getInforUser&controller=user&id=' . $_SESSION['id'] . '">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
                 <div><a href="logout.php">Đăng xuất</a></div>
             </div>
         </nav> 
         
       <div class="sidebar">
             <div>
-                <i class="bi bi-bootstrap "  ></i>
+                <i class="bi bi-bootstrap"></i>
                 <a href="index.php?action=index&controller=blog">Blogs</a>
             </div>
             <div>

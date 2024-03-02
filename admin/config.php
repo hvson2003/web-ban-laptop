@@ -33,7 +33,6 @@ function template_header($title) {
         
         <nav class="navtop">
             <div>
-
                 <div><h1>ADMIN</h1></div>
                 <div><a href="index.php?action=getInforUser&controller=user&id=' . $_SESSION['id'] . '">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
                 <div><a href="logout.php">Đăng xuất</a></div>
@@ -41,6 +40,10 @@ function template_header($title) {
         </nav> 
         
       <div class="sidebar">
+            <div>
+                <i class="bi bi-house"></i>
+                <a href="index.php?action=index&controller=dashboard">Dashboard</a>
+            </div>
             <div>
                 <i class="bi bi-bootstrap"></i>
                 <a href="index.php?action=index&controller=blog">Blogs</a>
@@ -69,15 +72,15 @@ function template_header($title) {
                 <a href="index.php?action=index&controller=order">Orders</a>
             </div>
             <div>
-            <i class="bi bi-box"></i>
-            <a href="index.php?action=index&controller=product">Products</a></div>
+                <i class="bi bi-box"></i>
+                <a href="index.php?action=index&controller=product">Products</a></div>
             <div>
-            <i class="bi bi-sd-card"></i><a href="index.php?action=index&controller=ram">Rams</a></div>
+                <i class="bi bi-sd-card"></i><a href="index.php?action=index&controller=ram">Rams</a></div>
             <div>
-            <i class="bi bi-file-easel"></i><a href="index.php?action=index&controller=slide">Slides</a></div>
+                <i class="bi bi-file-easel"></i><a href="index.php?action=index&controller=slide">Slides</a></div>
             <div>
-            <a href="index.php?action=index&controller=user">
-            <i class="fas fa-user-circle"></i> Users</a>
+                <a href="index.php?action=index&controller=user">
+                <i class="bi bi-person-square"></i> Users</a>
             </div>
         </div>
 

@@ -1,12 +1,16 @@
 <?=template_header('Thông tin')?>
 
 <div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
+    <div class="row  form_profie">
         <div class="col-md-5 border-right">
             <form action="index.php?controller=user&action=update_profile" method="post" class="form_edit">
                 <input type="text" class="form-control" name="id" value="<?= $user['id'] ?>" hidden>
-                <div class="p-3 py-5">
-                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"></div>
+                <div class="p-1 py-3 box_profi">
+                    <div class="d-flex flex-column align-items-center text-center p-2 py-4">
+                        <div class="border-animation">
+                            <img class="rounded-circle" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                        </div>
+                    </div>
                     <div class="row mt-2">
                         <div class="col-md-6"><label class="labels">Username</label><input type="text" class="form-control" name="username" value="<?= $user['username'] ?>"></div>
                         <div class="col-md-6"><label class="labels">Fullname</label><input type="text" class="form-control" name="fullname" value="<?= $user['fullname'] ?>"></div>

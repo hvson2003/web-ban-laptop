@@ -4,8 +4,8 @@
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Thêm Danh Mục</h3>
-                <form action="index.php?controller=user&action=update form_eidt" method="post">
+                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Danh Mục</h3>
+                <form class="form_edit" action="index.php?controller=user&action=update " method="post">
                 <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Username</span>
                         <input type="text" class="form-control" value="<?= $user['username'] ?>" required name="username">

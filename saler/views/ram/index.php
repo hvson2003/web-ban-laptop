@@ -8,7 +8,7 @@
                 <td>#</td>
                 <td>Name</td>
                 <td>Value</td>
-                <td colspan="1">Action</td>
+                <td colspan="3">Action</td>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +17,9 @@
                 <td><?=$a['id']?></td>
                 <td><?=$a['name']?></td>
                 <td><?=$a['value']?></td>
+                <td class="actions">
+                    <a href="index.php?action=edit&controller=ram&id=<?=$a['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                </td>
                 <td class="actions">
                     <a href="#" class="trash" onclick="confirmDelete(<?=$a['id']?>)"><i class="fas fa-trash fa-xs"></i></a>                    
                     <form id="deleteForm-<?=$a['id']?>" action="index.php?action=delete&controller=ram&id=<?=$a['id']?>" method="post" style="display: none;">

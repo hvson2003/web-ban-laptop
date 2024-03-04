@@ -5,14 +5,14 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold title_create">Thêm Người Dùng</h3>
-                <form class="form_create" action="index.php?controller=category&action=store" method="post">
+                <form class="form_create" action="index.php?controller=user&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Username</span>
                         <input type="text" class="form-control" required name="username">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Password</span>
-                        <input type="password" class="form-control"233456 required name="username">
+                        <input type="password" class="form-control" required name="password">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Fullname</span>
@@ -33,8 +33,8 @@
                     <div class="input-group mt-3 mb-3 ">
                         <label  for="role" >Role</label>
                         <select  name="role" id="role">
-                            <option value="0">Người dùng thường</option>
-                            <option value="2">Người bán hàng</option>
+                            <option value="2">Người dùng thường</option>
+                            <option value="1">Người bán hàng</option>
                         </select>
                     </div>
                     <div class="form-group  float-end ">

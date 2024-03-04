@@ -13,7 +13,7 @@
                 <td>Address</td>
                 <td>Phone</td>
                 <td>Role</td>
-                <td colspan="3">Action</td>
+                <td colspan="2">Action</td>
             </tr>
         </thead>
         <tbody>
@@ -26,10 +26,7 @@
                 <td><?=$user['email']?></td>
                 <td><?=$user['address']?></td>
                 <td><?=$user['phone']?></td>
-                <td><?= ($user['role']==1) ? 'Người dùng thường' : 'Nguời bán hàng' ?></td>
-                <td class="actions">
-                    <a href="index.php?action=detail&controller=user&id=<?=$user['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
-                </td>
+                <td><?= ($user['role']==2) ? 'Người dùng thường' : 'Nguời bán hàng' ?></td>
                 <td class="actions">
                     <a href="index.php?action=edit&controller=user&id=<?=$user['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                 </td>

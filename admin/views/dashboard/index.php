@@ -1,5 +1,5 @@
 <?=template_header('Trang chủ')?>
-    <div class="container rounded bg-white mt-5 mb-5">
+    <div class="container custom-container rounded bg-white mt-5 mb-5 container_dashboard">
     <div class="row title_edit">
         <div class="col-md-3 border-right">
             <div class="container mt-3">

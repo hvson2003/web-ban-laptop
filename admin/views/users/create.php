@@ -30,9 +30,9 @@
                         <span class="input-group-text">Phone</span>
                         <input type="text" class="form-control" required name="phone">
                     </div>
-                    <div class="input-group mt-3 mb-3">
-                        <label for="role">Role</label>
-                        <select name="role" id="role">
+                    <div class="input-group mt-3 mb-3 ">
+                        <label  for="role" >Role</label>
+                        <select  name="role" id="role">
                             <option value="0">Người dùng thường</option>
                             <option value="2">Người bán hàng</option>
                         </select>

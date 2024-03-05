@@ -5,7 +5,7 @@ include_once 'config.php';
 
 <?php
 session_start();
-if($_SESSION["logined"] != true){ header("Location: index.html"); }
+if($_SESSION["logined"] != true && $_SESSION['role'] != 0){ header("Location: index.html"); }
 
 $controller = isset($_GET['controller']) ? $_GET['controller'] : 'dashboard';
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';

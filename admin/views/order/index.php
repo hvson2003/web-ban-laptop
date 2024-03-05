@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($ram as $a): ?>
+            <?php foreach ($order as $a): ?>
             <tr>
                 <td><?=$a['id']?></td>
                 <td><?=$a['fullname']?></td>

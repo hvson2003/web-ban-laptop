@@ -26,6 +26,9 @@
                         <input type="text" class="form-control" value=<?= $product['thumbnail'] ?> required name="thumbnail">
                     </div>
                     <div class="input-group mt-3 mb-3">
+                        <img src="../<?=$product['thumbnail']?>" width="200">
+                    </div>
+                    <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Product Description</span>
                         <!-- <input type="text" class="form-control" value=<?= $product['product_desc'] ?> required name="product_desc"> -->
                         <textarea type="text" style="width: 300px; height: 150px;" class="form-control" name="product_desc" required><?= $product['product_desc'] ?></textarea>
@@ -33,7 +36,7 @@
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Detail Description</span>
                         <!-- <input type="text" class="form-control" value=<?= $product['detail_desc'] ?> required name="detail_desc"> -->
-                        <textarea type="text" style="width: 300px; height: 150px;" class="form-control" name="detail_desc" required><?= $product['detail_desc'] ?></textarea>
+                        <textarea id="content"  type="text" style="width: 300px; height: 150px;" class="form-control" name="detail_desc" required><?= $product['detail_desc'] ?></textarea>
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Chipset</span>
@@ -86,5 +89,11 @@
     </main>
 </body>
 </html>
-
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <?=template_footer()?>

@@ -27,7 +27,7 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Image Url</span>
-                        <input type="text" class="form-control" required name="image_url">
+                        <input type="file" class="form-control" required name="image_url">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Button Title</span>

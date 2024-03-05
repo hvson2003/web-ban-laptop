@@ -4,7 +4,7 @@
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Sản Phẩm</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Bài Viết</h3>
                 <form class="form_edit" action="index.php?controller=blog&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" value="<?= $blog['id'] ?>" required name="id" hidden>
@@ -15,7 +15,7 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Content</span>
-                        <textarea type="text" class="form-control" name="content" required><?= $blog['content'] ?></textarea>
+                        <textarea id="content" type="text" style="width: 500px; height: 300px;" class="form-control" name="content" required><?= $blog['content'] ?></textarea>
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Blog Description</span>
@@ -37,7 +37,10 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Thumbnail</span>
-                        <input type="text" class="form-control" value=<?= $blog['thumbnail'] ?> required name="thumbnail">
+                        <input type="file" class="form-control" accept=".jpg, .png, .jpeg" required name="thumbnail">
+                    </div>
+                    <div class="input-group mt-3 mb-3">
+                        <img src="../<?=$blog['thumbnail']?>" width="200">
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Đồng ý" class="btn btn-success">
@@ -49,5 +52,11 @@
     </main>
 </body>
 </html>
-
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <?=template_footer()?>

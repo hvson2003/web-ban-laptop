@@ -22,7 +22,7 @@
                         <input type="submit" value="Thêm" class="btn btn-success">
                         <a href="index.php?controller=config&action=index" class="btn btn-warning ">Quay lại</a>
                     </div>
-                </form>s
+                </form>
             </div>
         </div>
     </main>

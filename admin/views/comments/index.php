@@ -1,4 +1,4 @@
-<?=template_header('Danh Mục')?>
+<?=template_header('Bình Luận')?>
 
 <div class="content read">
 	<table>

@@ -37,7 +37,7 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Thumbnail</span>
-                        <input type="text" class="form-control" value=<?= $blog['thumbnail'] ?> required name="size">
+                        <img src="../<?=$blog['thumbnail']?>" width="200">
                     </div>
                     <div class="form-group  float-end ">
                         <a href="index.php?controller=blog&action=index" class="btn btn-warning ">Quay lại</a>
@@ -48,5 +48,11 @@
     </main>
 </body>
 </html>
-
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <?=template_footer()?>

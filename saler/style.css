@@ -6,13 +6,13 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: #ffffff;
-    margin: 0 ;
+    background-color: #f46a6a;
+    margin: 0;
    
 }
 
 .navtop {
-    background-color: #96c2ff;
+    background: linear-gradient( #26ff00, #ffffff);
     height: 60px;
     width: 100%;
     border: 0;
@@ -20,7 +20,7 @@ body {
     top: 0;
     right: 0;
     z-index: 800;
-    border-bottom: 1px solid #acacac;
+    border-bottom: 1px solid #000000;
 }
 .navtop div {
     display: flex;
@@ -220,8 +220,8 @@ body {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
     width: 215px;
     z-index: 200;
-    background-color:  #96c2ff;
-    border: 1px solid #acacac;
+    background: linear-gradient( #26ff00, #ffffff);
+    border: 1px solid #000000;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -246,7 +246,7 @@ body {
 }
 .sidebar div:hover{
     background-color: #ffffff;
-    border: 1px solid #1f1f1f;
+    border: 1px solid #0004ff;
 }
 .sidebar div a:hover{
     color: rgb(5, 5, 5);

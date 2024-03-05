@@ -4,8 +4,8 @@
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold">Thêm Danh Mục</h3>
-                <form action="index.php?controller=category&action=update" method="post">
+                <h3 class="text-center text-uppercase fw-bold title_detail">Thêm Danh Mục</h3>
+                <form class="form_detail" action="index.php?controller=category&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" required name="id" value="<?= $category["id"] ?>" hidden>
                     </div>

@@ -37,7 +37,7 @@ class Color{
   
   public function save()
   {
-      $query = $this->db->prepare('INSERT INTO colors (id, color_id, product_id) 
+      $query = $this->db->prepare('INSERT INTO colors (id, name, value) 
                   VALUES (:id, :color_id, :product_id)');
       $query->bindParam(':id', $this->id, PDO::PARAM_INT);
       $query->bindParam(':color_id', $this->colorId, PDO::PARAM_STR);
@@ -47,8 +47,8 @@ class Color{
 
   public function update($id)
   {
-      $query = $this->db->prepare('UPDATE colors SET id = :id, color_id = :color_id, product_id = :product_id WHERE id = :id');
-      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
+      $query = $this->db->prepare('UPDATE colors SET id = :id, name = :color_id, value = :product_id WHERE id = :id');
+      $query->bindParam(':id', $id, PDO::PARAM_INT);
       $query->bindParam(':color_id', $this->colorId, PDO::PARAM_STR);
       $query->bindParam(':product_id', $this->productId, PDO::PARAM_STR); 
       $query->execute();

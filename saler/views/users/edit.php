@@ -3,9 +3,9 @@
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm form_edit">
                 <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Người Dùng</h3>
-                <form action="index.php?controller=user&action=update" method="post">
+                <form class="form_edit" action="index.php?controller=user&action=update" method="post">
                     <input type="text" class="form-control" value="<?= $user['id'] ?>" required name="id" hidden>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Username</span>

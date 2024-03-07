@@ -31,11 +31,13 @@
                         <input type="text" class="form-control" required name="phone">
                     </div>
                     <div class="input-group mt-3 mb-3 ">
-                        <label  for="role" >Role</label>
+                        <div>
+                        <label for="role" >Role</label>
                         <select  name="role" id="role">
                             <option value="2">Người dùng thường</option>
                             <option value="1">Người bán hàng</option>
                         </select>
+                        </div>
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">

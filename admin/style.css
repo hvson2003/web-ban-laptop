@@ -279,6 +279,8 @@ body {
     box-shadow: 0 0 20px #00fffb; 
 }
 
+
+
 @keyframes borderWave {
     0% {
         border-color: transparent;

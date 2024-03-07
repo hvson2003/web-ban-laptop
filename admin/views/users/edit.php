@@ -3,7 +3,7 @@
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm form_edit">
                 <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Người Dùng</h3>
                 <form action="index.php?controller=user&action=update" method="post">
                     <input type="text" class="form-control" value="<?= $user['id'] ?>" required name="id" hidden>
@@ -31,12 +31,14 @@
                         <span class="input-group-text">Phone</span>
                         <input type="text" class="form-control" value="<?= $user['phone'] ?>" required name="phone">
                     </div>
-                    <div class="input-group mt-3 mb-3">
-                        <label for="role">Role</label>
-                        <select name="role" id="role">
-                            <option value="2" <?= ($user['role']==2) ? "selected" : "" ?>>Người dùng thường</option>
-                            <option value="1" <?= ($user['role']==1) ? "selected" : "" ?>>Người bán hàng</option>
-                        </select>
+                    <div class="input-group mt-3 mb-3 ">
+                        <div >
+                            <label   for="role">Role</label>
+                            <select   name="role" id="role">
+                                <option value="2" <?= ($user['role']==2) ? "selected" : "" ?>>Người dùng thường</option>
+                                <option value="1" <?= ($user['role']==1) ? "selected" : "" ?>>Người bán hàng</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Đồng ý" class="btn btn-success">

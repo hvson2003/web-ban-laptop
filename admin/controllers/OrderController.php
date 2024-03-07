@@ -51,7 +51,7 @@ class OrderController
     {
         $id = $_GET['id'];
         $order = Order::getById($id);
-        require 'views/oder/edit.php';
+        require 'views/order/edit.php';
     }
 
     public function detail()

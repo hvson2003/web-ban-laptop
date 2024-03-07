@@ -9,13 +9,13 @@ class ConfigController
         $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 
         $records_per_page = 5;
-        $stmt = $pdo->prepare('SELECT * FROM config ORDER BY id DESC LIMIT :current_page, :record_per_page');
+        $stmt = $pdo->prepare('SELECT * FROM     ORDER BY id DESC LIMIT :current_page, :record_per_page');
         $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
         $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
         $stmt->execute();
 
         $config = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $num_config = $pdo->query('SELECT COUNT(*) FROM config')->fetchColumn();
+        $num_config = $pdo->query('SELECT COUNT(*) FROM configs')->fetchColumn();
         $number_page = $num_configr/$records_per_page;
 
         $config = Config::getAll();

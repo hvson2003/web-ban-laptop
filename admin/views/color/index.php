@@ -18,6 +18,9 @@
                 <td><?=$a['name']?></td>
                 <td><?=$a['value']?></td>
                 <td class="actions">
+                    <a href="index.php?action=edit&controller=color&id=<?=$a['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                </td>
+                <td class="actions">
                     <a href="#" class="trash" onclick="confirmDelete(<?=$a['id']?>)"><i class="fas fa-trash fa-xs"></i></a>                    
                     <form id="deleteForm-<?=$a['id']?>" action="index.php?action=delete&controller=color&id=<?=$a['id']?>" method="post" style="display: none;">
                     </form>

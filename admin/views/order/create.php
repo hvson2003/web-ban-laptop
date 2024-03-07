@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold">Thêm order</h3>
-                <form action="index.php?controller=category&order=store" method="post">
+                <form action="index.php?controller=order&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">fullname</span>
                         <input type="text" class="form-control" required name="fullname">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">
-                        <a href="index.php?controller=category&action=index" class="btn btn-warning ">Quay lại</a>
+                        <a href="index.php?controller=order&action=index" class="btn btn-warning ">Quay lại</a>
                     </div>
                 </form>
             </div>

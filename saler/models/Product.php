@@ -36,7 +36,7 @@ class Product{
         return $list;
     }
 
-    public static function getCount()
+    public static function getCountProduct()
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         $result = $db->query('SELECT COUNT(*) as product_count FROM products');
@@ -45,6 +45,21 @@ class Product{
         $db->close();
         return $product_count;
     }
+
+    public static function getCountProductBySaler($id)
+    {
+        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $stmt = $db->prepare('SELECT COUNT(*) as product_count FROM products WHERE saler_id = ?');
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $product_count = $row['product_count'];
+        $stmt->close();
+        $db->close();
+        return $product_count;
+    }
+    
 
     public static function getById($id)
     {

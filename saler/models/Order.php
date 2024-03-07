@@ -55,6 +55,20 @@ class Order{
       $db->close();
       return $revenue;
   }
+  public static function getRevenueBySaler($id)
+  {
+      $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+      $stmt = $db->prepare('SELECT SUM(total) as revenue FROM orders_products WHERE product_id IN (SELECT id FROM products WHERE saler_id = ?)');
+      $stmt->bind_param('i', $id);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      $row = $result->fetch_assoc();
+      $revenue = $row['revenue'];
+      $stmt->close();
+      $db->close();
+      return $revenue;
+  }
+  
   public function save()
   {
       $query = $this->db->prepare('INSERT INTO orders (id, fullname, email,phone,address,note,created_at,payment,total,quantity,item,payed,active,user_id) 

@@ -35,7 +35,7 @@ class Controller
 
 		}
 		$category = $this->model->get('categories','id='.$_GET['id']);
-		$title = $category['name'].' - Thức Mobile';
+		$title = $category['name'].' - HE PC';
 		$product_list = $this->model->getArray('products','category_id='.$_GET['id'],$start.', '.$limit);
 		if(is_null($category)){
 			require_once('./view/error.php');

@@ -1,4 +1,4 @@
-<?=template_header('Config')?>
+<?=template_header('Configs')?>
 
 <div class="content read">
 	<a href="index.php?action=create&controller=config" class="create-contact">Create Config</a>

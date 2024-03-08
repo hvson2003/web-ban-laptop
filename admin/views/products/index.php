@@ -1,4 +1,4 @@
-<?=template_header('Sản phẩm')?>
+<?=template_header('Products')?>
 
 <div class="content read">
 	<a href="index.php?action=create&controller=product" class="create-contact">Create Product</a>

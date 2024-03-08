@@ -1,4 +1,4 @@
-<?=template_header('Color')?>
+<?=template_header('Colors')?>
 
 <div class="content read">
 	<a href="index.php?action=create&controller=color" class="create-contact">Create color</a>

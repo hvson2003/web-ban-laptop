@@ -1,4 +1,4 @@
-<?=template_header('Order')?>
+<?=template_header('Orders')?>
 
 <div class="content read">
 	<a href="index.php?action=create&controller=order" class="create-contact">Create Order</a>

@@ -1,4 +1,4 @@
-<?=template_header('Slide')?>
+<?=template_header('Slides')?>
 
 <div class="content read">
     <a href="index.php?action=create&controller=slide" class="create-contact">Create Slide</a>

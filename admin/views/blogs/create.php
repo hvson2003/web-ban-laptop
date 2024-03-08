@@ -1,10 +1,10 @@
-<?=template_header('Thêm Bài Viết')?>
+<?=template_header('Create Blog')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_create">Thêm  Bài Viết</h3>
+                <h3 class="text-center text-uppercase fw-bold title_create">Create Blog</h3>
                 <form class="form_create" action="index.php?controller=blog&action=store" method="post" enctype="multipart/form-data">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Title</span>

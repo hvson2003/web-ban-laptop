@@ -1,10 +1,10 @@
-<?=template_header('Sửa Silde')?>
+<?=template_header('Edit Silde')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Slide</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Edit Slide</h3>
                 <form class="form_edit" action="index.php?controller=slide&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" value="<?= $slide['id'] ?>" required name="id" hidden>

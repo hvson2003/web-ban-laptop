@@ -1,10 +1,10 @@
-<?=template_header('Sửa ram')?>
+<?=template_header('Edit Ram')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa ram</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Edit Ram</h3>
                 <form class="form_edit" action="index.php?controller=ram&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" required name="id" value="<?= $ram["id"] ?>" hidden>

@@ -1,4 +1,4 @@
-<?=template_header('Người Dùng')?>
+<?=template_header('Users')?>
 
 <div class="content read">
 	<a href="index.php?action=create&controller=user" class="create-contact">Create user</a>

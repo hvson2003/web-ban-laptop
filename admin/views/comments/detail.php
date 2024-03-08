@@ -1,4 +1,4 @@
-<?=template_header('Chi tiết bình luận')?>
+<?=template_header('Detail Comment')?>
 
 <body>
     <main class="container mt-5 mb-5">

@@ -79,7 +79,7 @@ class Order{
   public function update($id)
   {
       $query = $this->db->prepare('UPDATE orders SET id= :id, fullname= :fullname, email= :email,phone= :phone,address= :address,note= :note,created_at= :created_at,payment= :payment,total= :total,quantity= :quantity,item= :item,payed= :payed,active= :active,user_id= :user_id WHERE id= :id');
-      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
+      $query->bindParam(':id', $id, PDO::PARAM_INT);
       $query->bindParam(':fullname', $this->fullname, PDO::PARAM_STR);
       $query->bindParam(':email', $this->email, PDO::PARAM_STR);
       $query->bindParam(':phone', $this->phone, PDO::PARAM_STR);

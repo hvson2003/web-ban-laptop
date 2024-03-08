@@ -41,19 +41,19 @@ class Config{
       $query = $this->db->prepare('INSERT INTO configs (id, config_key, config_value,config_desc) 
                   VALUES (:id, :config_key, :config_value,:config_desc )');
       $query->bindParam(':id', $this->id, PDO::PARAM_INT);
-      $query->bindParam(':config_key', $this->colorId, PDO::PARAM_STR);
-      $query->bindParam(':config_value', $this->productId, PDO::PARAM_STR);
-      $query->bindParam(':config_desc', $this->productId, PDO::PARAM_STR);
+      $query->bindParam(':config_key', $this->config_key, PDO::PARAM_STR);
+      $query->bindParam(':config_value', $this->config_value, PDO::PARAM_STR);
+      $query->bindParam(':config_desc', $this->config_desc, PDO::PARAM_STR);
       $query->execute();
   }
 
   public function update($id)
   {
       $query = $this->db->prepare('UPDATE configs SET id = :id, config_key = :config_key, config_value = :config_value , config_desc = :config_desc WHERE id = :id');
-      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
-      $query->bindParam(':config_key', $this->colorId, PDO::PARAM_STR);
-      $query->bindParam(':config_value', $this->productId, PDO::PARAM_STR);
-      $query->bindParam(':config_desc', $this->productId, PDO::PARAM_STR);
+      $query->bindParam(':id', $id, PDO::PARAM_INT);
+      $query->bindParam(':config_key', $this->config_key, PDO::PARAM_STR);
+      $query->bindParam(':config_value', $this->config_value, PDO::PARAM_STR);
+      $query->bindParam(':config_desc', $this->config_desc, PDO::PARAM_STR);
       $query->execute();
   }
 

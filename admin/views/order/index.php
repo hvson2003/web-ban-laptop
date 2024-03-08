@@ -18,7 +18,7 @@
                 <td><?=$a['fullname']?></td>
                 <td><?=$a['email']?></td>
                 <td class="actions">
-                    <a href="index.php?action=detail&controller=order&id=<?=$blog['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
+                    <a href="index.php?action=detail&controller=order&id=<?=$a['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
                 </td>
                 <td class="actions">
                     <a href="index.php?action=edit&controller=order&id=<?=$a['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>

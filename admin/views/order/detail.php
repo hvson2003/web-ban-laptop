@@ -1,4 +1,4 @@
-<?=template_header('Xem chi tiet Oder')?>
+<?=template_header('Detail Oder')?>
 
 <body>
     <main class="container mt-5 mb-5">

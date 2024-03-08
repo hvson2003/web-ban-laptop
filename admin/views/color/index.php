@@ -1,7 +1,7 @@
 <?=template_header('Color')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=color" class="create-contact">Create color</a>
+	<a href="index.php?action=create&controller=color" class="create-contact">Create Color</a>
 	<table>
         <thead>
             <tr>

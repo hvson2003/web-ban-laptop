@@ -1,10 +1,10 @@
-<?=template_header('Thêm Danh Mục')?>
+<?=template_header('Create Category')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold">Thêm Danh Mục</h3>
+                <h3 class="text-center text-uppercase fw-bold">Create Category</h3>
                 <form action="index.php?controller=category&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Name</span>

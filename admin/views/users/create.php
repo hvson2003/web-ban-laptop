@@ -1,10 +1,10 @@
-<?=template_header('Thêm Người Dùng')?>
+<?=template_header('Create User')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_create">Thêm Người Dùng</h3>
+                <h3 class="text-center text-uppercase fw-bold title_create">Create User</h3>
                 <form class="form_create" action="index.php?controller=user&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Username</span>

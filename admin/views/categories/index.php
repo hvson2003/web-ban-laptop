@@ -1,4 +1,4 @@
-<?=template_header('Danh Mục')?>
+<?=template_header('Category')?>
 
 <div class="content read">
 	<a href="index.php?action=create&controller=category" class="create-contact">Create Category</a>

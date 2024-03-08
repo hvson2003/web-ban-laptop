@@ -1,10 +1,10 @@
-<?=template_header('Sửa Sản Phẩm')?>
+<?=template_header('Edit Product')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Sản Phẩm</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Edit Product</h3>
                 <form class="border shadow p-5 form_edit" action="index.php?controller=product&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" value=<?= $product['id'] ?> name="id" hidden>

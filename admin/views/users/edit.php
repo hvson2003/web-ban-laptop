@@ -1,10 +1,10 @@
-<?=template_header('Người dùng')?>
+<?=template_header('Edit User')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa Người Dùng</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Edit User</h3>
                 <form action="index.php?controller=user&action=update" method="post">
                     <input type="text" class="form-control" value="<?= $user['id'] ?>" required name="id" hidden>
                     <div class="input-group mt-3 mb-3">

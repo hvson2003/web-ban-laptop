@@ -34,7 +34,7 @@ function template_header($title) {
         <nav class="navtop">
             <div>
                 <div><h1>ADMIN</h1></div>
-                <div><a href="index.php?action=getInforUser&controller=user&id=' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
+                <div><a href="index.php?action=getInforUser&controller=user&id=' . (isset($_SESSION['id']) ? $_SESSION['id'] : '') . '">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
                 <div><a href="logout.php">Đăng xuất</a></div>
             </div>
         </nav> 

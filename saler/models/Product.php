@@ -49,7 +49,7 @@ class Product{
     public static function getCountProductBySaler($id)
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $stmt = $db->prepare('SELECT COUNT(*) as product_count FROM products WHERE saler_id = ?');
+        $stmt = $db->prepare('SELECT COUNT(*) as product_count FROM products WHERE id = ?');
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();

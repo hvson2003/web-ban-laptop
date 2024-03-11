@@ -58,7 +58,7 @@ class Order{
   public static function getRevenueBySaler($id)
   {
       $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-      $stmt = $db->prepare('SELECT SUM(total) as revenue FROM orders_products WHERE product_id IN (SELECT id FROM products WHERE saler_id = ?)');
+      $stmt = $db->prepare('SELECT SUM(total) as revenue FROM orders_products WHERE product_id IN (SELECT id FROM products WHERE id = ?)');
       $stmt->bind_param('i', $id);
       $stmt->execute();
       $result = $stmt->get_result();

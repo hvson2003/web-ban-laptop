@@ -7,7 +7,6 @@
             <tr>
                 <td>#</td>
                 <td>Username</td>
-                <td>Password</td>
                 <td>Fullname</td>
                 <td>Email</td>
                 <td>Address</td>
@@ -21,7 +20,6 @@
             <tr>
                 <td><?=$user['id']?></td>
                 <td><?=$user['username']?></td>
-                <td><?=$user['password']?></td>
                 <td><?=$user['fullname']?></td>
                 <td><?=$user['email']?></td>
                 <td><?=$user['address']?></td>

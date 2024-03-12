@@ -62,7 +62,6 @@
                         <div class=" niceselect_option">
                             <form class="select_option" action="#">
                                 <select name="orderby" id="short">
-
                                     <option selected value="0">Sắp xếp theo</option>
                                 </select>
                             </form>

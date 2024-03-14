@@ -1,7 +1,10 @@
 <?=template_header('Slides')?>
 
 <div class="content read">
-    <a href="index.php?action=create&controller=slide" class="create-contact">Create Slide</a>
+    <div class="content-create">
+        <a href="index.php?action=create&controller=slide" class="create-contact">Create Slide</a>
+    </div>
+   
 	<table>
         <thead>
             <tr>

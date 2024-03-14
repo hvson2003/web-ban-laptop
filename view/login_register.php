@@ -144,12 +144,12 @@
         }
 
         // Kiểm tra số điện thoại
-        if (!(phone.startsWith('0') && (phone.length === 10 || phone.length === 11))) {
-            alert("Số điện thoại phải bắt đầu bằng số 0 và có độ dài là 10 hoặc 11 ký tự");
+        if (!(phone.startsWith('0') && (phone.length === 10 ))) {
+            alert("Số điện thoại phải bắt đầu bằng số 0 và có độ dài là 10 ");
             return false;
         }
 
-        return true; // Nếu tất cả điều kiện đều đúng
+        return true; 
     }
 </script>
 <?php require_once('footer.php') ?>

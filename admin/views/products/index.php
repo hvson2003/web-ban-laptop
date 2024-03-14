@@ -1,7 +1,10 @@
 <?=template_header('Products')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=product" class="create-contact">Create Product</a>
+    <div class="content-create">
+    <a href="index.php?action=create&controller=product" class="create-contact">Create Product</a>
+    </div>
+	
 	<table>
         <thead>
             <tr>

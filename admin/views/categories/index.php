@@ -1,7 +1,9 @@
 <?=template_header('Categories')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=category" class="create-contact">Create Category</a>
+    <div class="content-create">
+    <a href="index.php?action=create&controller=category" class="create-contact">Create Category</a>
+    </div>
 	<table>
         <thead>
             <tr>

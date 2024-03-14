@@ -1,7 +1,10 @@
 <?=template_header('Rams')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=ram" class="create-contact">Create ram</a>
+    <div class="content-create">
+        <a href="index.php?action=create&controller=ram" class="create-contact">Create ram</a>
+    </div>
+	
 	<table>
         <thead>
             <tr>

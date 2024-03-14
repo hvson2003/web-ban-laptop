@@ -1,7 +1,10 @@
 <?=template_header('Users')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=user" class="create-contact">Create user</a>
+    <div class="contents-create">
+         <a href="index.php?action=create&controller=user" class="create-contact">Create user</a>
+    </div>
+	
 	<table>
         <thead>
             <tr>

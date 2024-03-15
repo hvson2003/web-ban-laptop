@@ -46,7 +46,7 @@ class Blog{
         $query->bindParam(':content', $this->content, PDO::PARAM_STR);
         $query->bindParam(':blog_desc', $this->blog_desc, PDO::PARAM_STR);
         $query->bindParam(':created_at', date('Y-m-d H:i:s'), PDO::PARAM_STR);
-        $query->bindParam(':user_id', $this->user_id, PDO::PARAM_INT);
+        $query->bindParam(':user_id', $this->user_id, PDO::PARAM_STR);
         $query->bindParam(':thumbnail', $this->thumbnail, PDO::PARAM_STR);
         $query->execute();
     }

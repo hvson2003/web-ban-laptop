@@ -6,6 +6,7 @@
             <div class="col-sm">
                 <h3 class="text-center text-uppercase fw-bold title_create">Create Blog</h3>
                 <form class="form_create" action="index.php?controller=blog&action=store" method="post" enctype="multipart/form-data">
+                    <input type="text" class="form-control" value="<?= (isset($_SESSION['id'])) ? $_SESSION['id'] : '' ?>" name="user_id" hidden>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Title</span>
                         <input type="text" class="form-control" required value="1" name="title" style="width: 1000px; height: 30px;">

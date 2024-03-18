@@ -1,9 +1,9 @@
 <?=template_header('Detail Comment')?>
 
 <body>
-    <main class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-sm">
+    <main class="container mt-5 mb-5 ">
+        <div class="row ">
+            <div class="col-sm ">
                 <h3 class="text-center text-uppercase fw-bold title_detail">Chi tiết bình luận</h3>
                 <form class="form_detail" action="index.php?controller=comment&action=update" method="post">
                     <div class="input-group mt-3 mb-3">

@@ -127,27 +127,51 @@
 <!--script for dki-->
 <script>
     function validateForm() {
+        var username = document.forms["registrationForm"]["username"].value;
+        var fullname = document.forms["registrationForm"]["fullname"].value;
+        var address = document.forms["registrationForm"]["address"].value;
         var email = document.forms["registrationForm"]["email"].value;
         var password = document.forms["registrationForm"]["password"].value;
         var phone = document.forms["registrationForm"]["phone"].value;
+        
+    // Kiểm tra ký tự đặc biệt và độ dài tên đăng nhập
+    if (/[^a-zA-Z0-9_\s]/.test(username) || username.length > 255) {
+        alert("Tên đăng nhập không được chứa ký tự đặc biệt và không quá 255 ký tự.");
+        return false;
+    }
+
 
         // Kiểm tra cú pháp email
-        if (!/^\w+([\.-]?\w+)*@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|icloud\.com|me\.com|protonmail\.com|yandex\.com|live\.com|qq\.com|163\.com)$/.test(email)) {
-            alert("Email phải có định dạng hợp lệ và đuôi phổ biến như @gmail.com, @yahoo.com, v.v.");
-            return false;
-        }
+    if (!/^\w+([\.-]?\w+)*@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|icloud\.com|me\.com|protonmail\.com|yandex\.com|live\.com|qq\.com|163\.com)$/.test(email)) {
+        alert("Email phải có định dạng hợp lệ và đuôi phổ biến như @gmail.com, @yahoo.com, v.v.");
+        return false;
+    }
 
-        // Kiểm tra chiều dài mật khẩu
-        if (password.length <= 5 || password.length >= 255) {
-            alert("Mật khẩu phải dài ít nhất 6 kí tự và không quá 255 kí tự");
-            return false;
-        }
+    // Kiểm tra chiều dài mật khẩu
+    if (password.length <= 5 || password.length >= 255) {
+        alert("Mật khẩu phải dài ít nhất 6 kí tự và không quá 255 kí tự");
+        return false;
+    }
 
-        // Kiểm tra số điện thoại
-        if (!(phone.startsWith('0') && (phone.length === 10 ))) {
-            alert("Số điện thoại phải bắt đầu bằng số 0 và có độ dài là 10 ");
-            return false;
-        }
+    
+    // Kiểm tra họ và tên
+    if (!/^[a-zA-Z\sÀ-ỹ]+$/.test(fullname)) {
+        alert("Họ và tên không được chứa ký tự đặc biệt và không quá 255 ký tự");
+        return false;
+    }
+
+    // Kiểm tra số điện thoại
+    if (!(phone.startsWith('0') && (phone.length === 10 ))) {
+        alert("Số điện thoại phải bắt đầu bằng số 0 và có độ dài là 10 ");
+        return false;
+    }
+
+   //Kiểm tra địa chỉ
+    if (/[@!#$%^&*()+\=\[\]{};':"\\|<>?]/g.test(address.replace('/', ''))) {
+        alert("Địa chỉ không được chứa ký tự đặc biệt  và không quá 255 ký tự");
+        return false;
+    }
+
 
         return true; 
     }

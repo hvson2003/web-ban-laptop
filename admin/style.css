@@ -291,6 +291,11 @@ body {
     height: 100%;
    
   }
+  .Container_create{
+    background-color: #E5E8E8;
+    width: 100%;
+    
+  }
  
   .custom-container.container_dashboard h4{
     font-size: 18px;

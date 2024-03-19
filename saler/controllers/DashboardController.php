@@ -7,9 +7,10 @@ class DashboardController
 {
     public function index()
     {
-        $id = (isset($_SESSION['id']) ? $_SESSION['id'] : '');
-        $number_product = Product::getCountProductBySaler($id);
-        $revenue = Order::getRevenueBySaler($id);
+        $number_product = Product::getCount();
+        $number_saler = User::getCountSaler();
+        $number_user = User::getCountUser();
+        $revenue = Order::getRevenue();
 
         require 'views/dashboard/index.php';
     }

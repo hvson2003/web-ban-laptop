@@ -1,10 +1,10 @@
-<?=template_header('Thêm Người Dùng')?>
+<?=template_header('Create User')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_create">Thêm Người Dùng</h3>
+                <h3 class="text-center text-uppercase fw-bold title_create">Create User</h3>
                 <form class="form_create" action="index.php?controller=user&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Username</span>
@@ -31,11 +31,13 @@
                         <input type="text" class="form-control" required name="phone">
                     </div>
                     <div class="input-group mt-3 mb-3 ">
-                        <label  for="role" >Role</label>
+                        <div>
+                        <label for="role" >Role</label>
                         <select  name="role" id="role">
                             <option value="2">Người dùng thường</option>
                             <option value="1">Người bán hàng</option>
                         </select>
+                        </div>
                     </div>
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">

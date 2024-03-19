@@ -48,7 +48,7 @@ class Memory{
   public function update($id)
   {
       $query = $this->db->prepare('UPDATE memories SET id = :id, name = :name, value = :value WHERE id = :id');
-      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
+      $query->bindParam(':id', $id, PDO::PARAM_INT);
       $query->bindParam(':name', $this->name, PDO::PARAM_STR);
       $query->bindParam(':value', $this->value, PDO::PARAM_STR); 
       $query->execute();

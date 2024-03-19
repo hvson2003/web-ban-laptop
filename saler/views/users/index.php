@@ -1,13 +1,15 @@
-<?=template_header('Người Dùng')?>
+<?=template_header('Users')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=user" class="create-contact">Create user</a>
+    <div class="contents-create">
+         <a href="index.php?action=create&controller=user" class="create-contact">Create user</a>
+    </div>
+	
 	<table>
         <thead>
             <tr>
                 <td>#</td>
                 <td>Username</td>
-                <td>Password</td>
                 <td>Fullname</td>
                 <td>Email</td>
                 <td>Address</td>
@@ -21,7 +23,6 @@
             <tr>
                 <td><?=$user['id']?></td>
                 <td><?=$user['username']?></td>
-                <td><?=$user['password']?></td>
                 <td><?=$user['fullname']?></td>
                 <td><?=$user['email']?></td>
                 <td><?=$user['address']?></td>

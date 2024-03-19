@@ -55,20 +55,6 @@ class Order{
       $db->close();
       return $revenue;
   }
-  public static function getRevenueBySaler($id)
-  {
-      $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-      $stmt = $db->prepare('SELECT SUM(total) as revenue FROM orders_products WHERE product_id IN (SELECT id FROM products WHERE id = ?)');
-      $stmt->bind_param('i', $id);
-      $stmt->execute();
-      $result = $stmt->get_result();
-      $row = $result->fetch_assoc();
-      $revenue = $row['revenue'];
-      $stmt->close();
-      $db->close();
-      return $revenue;
-  }
-  
   public function save()
   {
       $query = $this->db->prepare('INSERT INTO orders (id, fullname, email,phone,address,note,created_at,payment,total,quantity,item,payed,active,user_id) 
@@ -93,7 +79,7 @@ class Order{
   public function update($id)
   {
       $query = $this->db->prepare('UPDATE orders SET id= :id, fullname= :fullname, email= :email,phone= :phone,address= :address,note= :note,created_at= :created_at,payment= :payment,total= :total,quantity= :quantity,item= :item,payed= :payed,active= :active,user_id= :user_id WHERE id= :id');
-      $query->bindParam(':id', $this->id, PDO::PARAM_INT);
+      $query->bindParam(':id', $id, PDO::PARAM_INT);
       $query->bindParam(':fullname', $this->fullname, PDO::PARAM_STR);
       $query->bindParam(':email', $this->email, PDO::PARAM_STR);
       $query->bindParam(':phone', $this->phone, PDO::PARAM_STR);

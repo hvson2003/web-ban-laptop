@@ -33,37 +33,55 @@ function template_header($title) {
         
         <nav class="navtop">
             <div>
-                <div><h1>SALER</h1></div>
-                <div><a href="index.php?action=getInforUser&controller=user&id=' . $_SESSION['id'] . '">' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '</div>
-                <div><a href="logout.php">Đăng xuất</a></div>
+                <div><h1>ADMIN</h1></div>
+                <div class="navtop-div-textname-admin">
+                
+                <a  href="index.php?action=getInforUser&controller=user&id=' . (isset($_SESSION['id']) ? $_SESSION['id'] : '') . '"> <i class="bi bi-person-square"></i>  ' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '
+                </div>
+                <div class="navtop-div-textname-dangxuat" ><a href="logout.php"> <i class="bi bi-person-circle"></i> Đăng xuất</a></div>
             </div>
         </nav> 
         
       <div class="sidebar">
             <div>
-                <i class="bi bi-house"></i>
-                <a href="index.php?action=index&controller=dashboard">Dashboard</a>
+                <a href="index.php?action=index&controller=dashboard">   <i class="bi bi-house fa-inverse"></i> Dashboard</a>
             </div>
             <div>
-                <i class="bi bi-border-all"></i>
-                <a href="index.php?action=index&controller=category">Categories</a></div>
-            <div>
-                <i class="bi bi-magic"></i>
-                <a href="index.php?action=index&controller=color">Colors</a>
+                <a href="index.php?action=index&controller=blog"> <i class="bi bi-bootstrap fa-inverse"></i> Blogs</a>
             </div>
             <div>
-                <i class="bi bi-memory"></i>
-                <a href="index.php?action=index&controller=memory">Memories</a>
+                <a href="index.php?action=index&controller=category"> <i class="bi bi-border-all fa-inverse"></i> Categories</a></div>
+            <div>
+           
+                <a href="index.php?action=index&controller=color">     <i class="bi bi-magic fa-inverse"></i> Colors</a>
             </div>
             <div>
-                <i class="bi bi-memory"></i>
-                <a href="index.php?action=index&controller=order">Orders</a>
+                
+                <a href="index.php?action=index&controller=comment"> <i class="bi bi-chat-left-dots fa-inverse"></i> Comments</a>
             </div>
             <div>
-                <i class="bi bi-box"></i>
-                <a href="index.php?action=index&controller=product">Products</a></div>
+                
+                <a href="index.php?action=index&controller=config"> <i class="bi bi-gear fa-inverse"></i> Configs</a>
+            </div>
             <div>
-                <i class="bi bi-sd-card"></i><a href="index.php?action=index&controller=ram">Rams</a>
+                
+                <a href="index.php?action=index&controller=memory"> <i class="bi bi-memory fa-inverse"></i> Memories</a>
+            </div>
+            <div>
+               
+                <a href="index.php?action=index&controller=order">  <i class="bi bi-memory fa-inverse"></i> Orders</a>
+            </div>
+            <div>
+                
+                <a href="index.php?action=index&controller=product"> <i class="bi bi-box fa-inverse"></i> Products</a></div>
+            <div>
+               <a href="index.php?action=index&controller=ram">  <i class="bi bi-sd-card fa-inverse"></i> Rams</a></div>
+            <div>
+               <a href="index.php?action=index&controller=slide">  <i class="bi bi-file-easel fa-inverse"></i> Slides</a></div>
+            <div>
+                <a href="index.php?action=index&controller=user">
+                <i class="bi bi-person-square fa-inverse"></i> Users
+                </a>
             </div>
         </div>
 

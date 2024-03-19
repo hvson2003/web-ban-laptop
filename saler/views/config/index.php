@@ -1,7 +1,10 @@
-<?=template_header('Config')?>
+<?=template_header('Configs')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=config" class="create-contact">Create Config</a>
+    <div class="content-create">
+        <a href="index.php?action=create&controller=config" class="create-contact">Create Config</a>
+    </div>
+
 	<table>
         <thead>
             <tr>

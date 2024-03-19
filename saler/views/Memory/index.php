@@ -1,7 +1,10 @@
 <?=template_header('Memory')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=memory" class="create-contact">Create memory</a>
+    <div class="content-create">
+    <a href="index.php?action=create&controller=memory" class="create-contact">Create memory</a>
+
+    </div>
 	<table>
         <thead>
             <tr>

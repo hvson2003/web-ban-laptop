@@ -1,10 +1,10 @@
-<?=template_header('Sửa config')?>
+<?=template_header('Edit Config')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Sửa config</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Edit Config</h3>
                 <form class="form_edit" action="index.php?controller=config&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" required name="id" value="<?= $config["id"] ?>" hidden>

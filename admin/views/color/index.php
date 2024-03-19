@@ -11,7 +11,7 @@
                 <td>#</td>
                 <td>Name</td>
                 <td>Value</td>
-                <td colspan="1">Action</td>
+                <td  colspan="1">Action</td>
             </tr>
         </thead>
         <tbody>

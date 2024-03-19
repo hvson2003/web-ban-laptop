@@ -135,7 +135,7 @@
         var phone = document.forms["registrationForm"]["phone"].value;
         
     // Kiểm tra ký tự đặc biệt và độ dài tên đăng nhập
-    if (/[^a-zA-Z0-9_\s]/.test(username) || username.length > 255) {
+    if (/[^a-zA-Z0-9_\s]/.test(username) || username.length > 255 || /\s/.test(username)) {
         alert("Tên đăng nhập không được chứa ký tự đặc biệt và không quá 255 ký tự.");
         return false;
     }

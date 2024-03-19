@@ -6,7 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: #a0a0a0;
+    background-color: #ededed;
     margin: 0 ;
    
 }
@@ -362,10 +362,12 @@ body {
     .row.title_edit {
         margin-top: 0px;
         width:100%; 
+        padding-right: 50px;
         padding-bottom: 15px;
         background-color: rgb(242, 244, 244);
 
       }
+    
 }
 @media only screen  and (max-width : 1210px) {
     .content {

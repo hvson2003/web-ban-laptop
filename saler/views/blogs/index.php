@@ -1,7 +1,9 @@
-<?=template_header('Bài viết')?>
+<?=template_header('Blogs')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=blog" class="create-contact">Create blog</a>
+	<div class="content-create">
+        <a href="index.php?action=create&controller=blog" class="create-contact">Create blog</a>
+    </div>
 	<table>
         <thead>
             <tr>

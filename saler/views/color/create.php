@@ -1,10 +1,10 @@
-<?=template_header('Thêm color')?>
+<?=template_header('Create Color')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_create">Thêm color</h3>
+                <h3 class="text-center text-uppercase fw-bold title_create">Create Color</h3>
                 <form class="form_create" action="index.php?controller=color&action=store " method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Name</span>

@@ -1,4 +1,4 @@
-<?=template_header('Danh Mục')?>
+<?=template_header('Comments')?>
 
 <div class="content read">
 	<table>

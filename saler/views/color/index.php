@@ -1,14 +1,17 @@
-<?=template_header('Color')?>
+<?=template_header('Colors')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=color" class="create-contact">Create color</a>
+    <div class="content-create">
+    <a href="index.php?action=create&controller=color" class="create-contact">Create color</a>
+
+    </div>
 	<table>
         <thead>
             <tr>
                 <td>#</td>
                 <td>Name</td>
                 <td>Value</td>
-                <td colspan="3">Action</td>
+                <td  colspan="1">Action</td>
             </tr>
         </thead>
         <tbody>

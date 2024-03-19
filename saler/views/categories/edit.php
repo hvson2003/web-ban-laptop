@@ -1,10 +1,10 @@
-<?=template_header('Sửa Danh Mục')?>
+<?=template_header('Edit Category')?>
 
 <body>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold title_edit">Thêm Danh Mục</h3>
+                <h3 class="text-center text-uppercase fw-bold title_edit">Edit Category</h3>
                 <form class="form_edit" action="index.php?controller=category&action=update" method="post">
                     <div class="input-group mt-3 mb-3">
                         <input type="text" class="form-control" required name="id" value="<?= $category["id"] ?>" hidden>

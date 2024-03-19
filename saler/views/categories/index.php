@@ -1,7 +1,9 @@
-<?=template_header('Danh Mục')?>
+<?=template_header('Categories')?>
 
 <div class="content read">
-	<a href="index.php?action=create&controller=category" class="create-contact">Create Category</a>
+    <div class="content-create">
+    <a href="index.php?action=create&controller=category" class="create-contact">Create Category</a>
+    </div>
 	<table>
         <thead>
             <tr>
@@ -9,7 +11,7 @@
                 <td>Name</td>
                 <td>Category Description</td>
                 <td>Thumbnail</td>
-                <td colspan="2">Action</td>
+                <td colspan="3">Action</td>
             </tr>
         </thead>
         <tbody>
@@ -21,9 +23,6 @@
                 <td><?=$category['thumbnail']?></td>
                 <td class="actions">
                     <a href="index.php?action=detail&controller=category&id=<?=$category['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
-                </td>
-                <td class="actions">
-                    <a href="index.php?action=edit&controller=category&id=<?=$category['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                 </td>
                 <td class="actions">
                     <a href="#" class="trash" onclick="confirmDelete(<?=$category['id']?>)"><i class="fas fa-trash fa-xs"></i></a>                    

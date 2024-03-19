@@ -1,4 +1,4 @@
-<?=template_header('Thông tin')?>
+<?=template_header('Information')?>
 
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row  form_profie">

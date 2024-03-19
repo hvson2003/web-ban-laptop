@@ -1,4 +1,4 @@
-<?=template_header('Thêm Slide')?>
+<?=template_header('Create Slide')?>
 
 <body>
     <main class="container mt-5 mb-5">
@@ -11,7 +11,7 @@
                 <td></td>
                 <td></td>
 
-                <h3 class="text-center text-uppercase fw-bold title_create">Thêm Slide</h3>
+                <h3 class="text-center text-uppercase fw-bold title_create">Create Slide</h3>
                 <form class="form_create" action="index.php?controller=slide&action=store" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Title</span>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Image Url</span>
-                        <input type="text" class="form-control" required name="image_url">
+                        <input type="file" class="form-control" required name="image_url">
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text">Button Title</span>

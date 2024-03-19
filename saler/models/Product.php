@@ -46,6 +46,17 @@ class Product{
         return $product_count;
     }
 
+    public static function getCountSaler()
+    {
+        $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $result = $db->query('SELECT COUNT(*) as product_count FROM products');
+        $row = $result->fetch_assoc();
+        $product_count = $row['product_count'];
+        $db->close();
+        return $product_count;
+    }
+
+
     public static function getById($id)
     {
         $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

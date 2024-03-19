@@ -47,21 +47,10 @@ function template_header($title) {
                 <a href="index.php?action=index&controller=dashboard">   <i class="bi bi-house fa-inverse"></i> Dashboard</a>
             </div>
             <div>
-                <a href="index.php?action=index&controller=blog"> <i class="bi bi-bootstrap fa-inverse"></i> Blogs</a>
-            </div>
-            <div>
                 <a href="index.php?action=index&controller=category"> <i class="bi bi-border-all fa-inverse"></i> Categories</a></div>
             <div>
            
                 <a href="index.php?action=index&controller=color">     <i class="bi bi-magic fa-inverse"></i> Colors</a>
-            </div>
-            <div>
-                
-                <a href="index.php?action=index&controller=comment"> <i class="bi bi-chat-left-dots fa-inverse"></i> Comments</a>
-            </div>
-            <div>
-                
-                <a href="index.php?action=index&controller=config"> <i class="bi bi-gear fa-inverse"></i> Configs</a>
             </div>
             <div>
                 
@@ -76,13 +65,6 @@ function template_header($title) {
                 <a href="index.php?action=index&controller=product"> <i class="bi bi-box fa-inverse"></i> Products</a></div>
             <div>
                <a href="index.php?action=index&controller=ram">  <i class="bi bi-sd-card fa-inverse"></i> Rams</a></div>
-            <div>
-               <a href="index.php?action=index&controller=slide">  <i class="bi bi-file-easel fa-inverse"></i> Slides</a></div>
-            <div>
-                <a href="index.php?action=index&controller=user">
-                <i class="bi bi-person-square fa-inverse"></i> Users
-                </a>
-            </div>
         </div>
 
     ';

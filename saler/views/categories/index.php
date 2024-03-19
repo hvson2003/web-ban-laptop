@@ -25,6 +25,9 @@
                     <a href="index.php?action=detail&controller=category&id=<?=$category['id']?>" class="detail"><i class="fas fa-eye fa-xs"></i></a>
                 </td>
                 <td class="actions">
+                    <a href="index.php?action=detail&controller=category&id=<?=$category['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                </td>
+                <td class="actions">
                     <a href="#" class="trash" onclick="confirmDelete(<?=$category['id']?>)"><i class="fas fa-trash fa-xs"></i></a>                    
                     <form id="deleteForm-<?=$category['id']?>" action="index.php?action=delete&controller=category&id=<?=$category['id']?>" method="post" style="display: none;">
                     </form>

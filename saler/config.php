@@ -33,7 +33,7 @@ function template_header($title) {
         
         <nav class="navtop">
             <div>
-                <div><h1>ADMIN</h1></div>
+                <div><h1>SALER</h1></div>
                 <div class="navtop-div-textname-admin">
                 
                 <a  href="index.php?action=getInforUser&controller=user&id=' . (isset($_SESSION['id']) ? $_SESSION['id'] : '') . '"> <i class="bi bi-person-square"></i>  ' . (isset($_SESSION['name']) ? $_SESSION['name'] : '') . '

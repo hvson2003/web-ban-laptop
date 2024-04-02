@@ -153,10 +153,20 @@
         return false;
     }
 
-    
+    // Kiểm tra khoảng trắng mật khẩu
+    if (/\s/.test(password)) {
+        alert("Mật khẩu không được chứa khoảng trắng.");
+        return false;
+    }
+
     // Kiểm tra họ và tên
-    if (!/^[a-zA-Z\sÀ-ỹ]+$/.test(fullname)) {
+    if (!/^[a-zA-Z\sÀ-ỹ]{1,255}$/.test(fullname)) {
         alert("Họ và tên không được chứa ký tự đặc biệt và không quá 255 ký tự");
+        return false;
+    }
+    // Kiểm tra xem fullname có chứa khoảng trắng không
+    if (!/\s/.test(fullname)) {
+        alert("Dữ liệu nhập vào không chứa khoảng trắng.");
         return false;
     }
 
@@ -167,11 +177,26 @@
     }
 
    //Kiểm tra địa chỉ
-    if (/[@!#$%^&*()+\=\[\]{};':"\\|<>?]/g.test(address.replace('/', ''))) {
-        alert("Địa chỉ không được chứa ký tự đặc biệt  và không quá 255 ký tự");
+    if (/[@!#$%^&*()+\=\[\]{};':"\\|<>?]/g.test(address.replace('/', '')) || address.length > 255) {
+        alert("Địa chỉ không được chứa ký tự đặc biệt và không quá 255 ký tự");
+        return false;
+    }
+    // Kiểm tra xem địa chỉ có chứa ít nhất một ký tự số không
+    if (!/\d/.test(address)) {
+        alert("Dữ liệu nhập vào phải có ký tự số");
         return false;
     }
 
+    if (!/\s/.test(address)) {
+        alert("Dữ liệu nhập vào phải có khoảng trắng");
+        return false;
+    }
+
+    // Kiểm tra xem địa chỉ chỉ chứa số và không có chữ cái
+    if (/^\d+$/.test(address) || !/[a-zA-Z]/.test(address)) {
+        alert("Dữ liệu nhập vào phải có chữ cái");
+        return false;
+    }
 
         return true; 
     }
